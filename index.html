@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cubicación y Valorización Referencial CNR</title>
 
-<!-- Vue 3 servido localmente: sin Node.js, sin build, sin internet -->
 <script src="vue.global.js"></script>
+<script src="exceljs.min.js"></script>
 
 <style>
     * { box-sizing: border-box; }
@@ -19,8 +19,6 @@
     .barra-color {
         width: 100%;
         height: 0.5rem;
-        /* Placeholder: reemplazar por el color/gradiente definitivo cuando
-           se defina (institucional, marca, etc.). */
         background: #d94f30;
     }
     header {
@@ -79,6 +77,8 @@
     }
     #panel-presupuesto { flex: 1 1 100%; }
     #panel-acerca { width: 100%; display: flex; justify-content: center; }
+    #panel-exportar { width: 100%; display: flex; flex-direction: column; align-items: center; }
+    #panel-exportar h2 { text-align: center; }
     .col-acerca { max-width: 640px; text-align: center; }
     .col-acerca h2 { text-align: center; }
     .col-acerca p { margin: 0.3rem 0 1.1rem; line-height: 1.5; color: #333; }
@@ -432,7 +432,6 @@
     }
     .vacio { color: #777; font-style: italic; }
 
-    /* Impresión / "Exportar a PDF": solo se ve #zona-imprimible */
     @media print {
         body * { visibility: hidden; }
         #zona-imprimible, #zona-imprimible * { visibility: visible; }
@@ -773,7 +772,7 @@
 
                 <template v-if="resultado">
                     <div class="info-calculada">
-                        Valor UF Base: <strong>${{ formato(resultado.uf_clp, 2) }}</strong>
+                        Valor UF Base: <strong>${{ formato(resultado.uf_clp, 2) }}</strong><br>(19/Marzo/2026)
                     </div>
                     <div v-for="info in resultado.informativos" :key="info.nombre" class="info-calculada">
                         {{ info.nombre }}: <strong>{{ info.valor }} {{ info.unidad }}</strong>
@@ -787,7 +786,7 @@
     </main>
 
     <main v-if="pestanaActiva === 'exportar'">
-        <div class="panel" style="flex: 1;">
+        <div class="panel" id="panel-exportar" style="flex: 1;">
             <h2>Exportar</h2>
 
             <p v-if="!resultado" class="vacio">
@@ -796,15 +795,15 @@
 
             <template v-if="resultado">
                 <div class="opciones-exportar">
-                    <button @click="exportarCSV">Descargar Excel (CSV)</button>
+                    <button :disabled="exportandoXLSX" @click="exportarXLSX">
+                        {{ exportandoXLSX ? 'Generando...' : 'Descargar Excel (XLSX)' }}
+                    </button>
                     <button @click="exportarPDF">Exportar a PDF</button>
                 </div>
 
                 <p class="nota-exportar">
                     "Exportar a PDF" abre el diálogo de impresión del navegador
-                    — elige "Guardar como PDF" como destino. El formato final
-                    (membrete, orden de secciones) se ajustará cuando se
-                    defina la plantilla definitiva con el cliente.
+                    — elige "Guardar como PDF" como destino.
                 </p>
 
                 <!-- Documento formateado: esto es lo único que sale al imprimir -->
@@ -985,6 +984,7 @@ createApp({
             ufActual: null,
             ufIngresada: null,
             calculando: false,
+            exportandoXLSX: false,
             error: null,
             pestanaActiva: "datos",
             modal: { visible: false, mensaje: "", textoBoton: "OK", accion: null }
@@ -1109,45 +1109,139 @@ createApp({
             if (!this.ufActual) return 0;
             return montoClp / this.ufActual;
         },
-        exportarCSV() {
-            if (!this.resultado) return;
-            const r = this.resultado;
-            const filas = [];
-            filas.push([r.tipologia]);
-            filas.push([]);
-            filas.push(["Código", "Partida", "Un.", "Cantidad", "P.U. ($)", "Subtotal ($)", "Subtotal (UF)"]);
-            for (const p of r.partidas) {
-                filas.push([
-                    p.codigo, p.descripcion, p.unidad,
-                    this.formato(p.cantidad, 2), this.formato(p.precio_clp),
-                    this.formato(p.subtotal_clp), this.formato(this.ufDe(p.subtotal_clp), 2),
-                ]);
-            }
-            filas.push([]);
-            filas.push(["Resumen", "$", "UF"]);
-            const filaResumen = (etiqueta, monto) =>
-                filas.push([etiqueta, this.formato(monto.clp), this.formato(this.ufDe(monto.clp), 2)]);
-            filaResumen("Costo directo", r.resumen.costo_directo);
-            filaResumen(`Gastos generales (${r.porcentajes.gastos_generales}%)`, r.resumen.gastos_generales);
-            filaResumen(`Utilidades (${r.porcentajes.utilidades}%)`, r.resumen.utilidades);
-            filaResumen(`Imprevistos (${r.porcentajes.imprevistos}%)`, r.resumen.imprevistos);
-            filaResumen("Costo total neto", r.resumen.neto);
-            filaResumen(`IVA (${r.porcentajes.iva}%)`, r.resumen.iva);
-            filaResumen("TOTAL CON IVA", r.resumen.total);
+        async exportarXLSX() {
+            if (!this.resultado || this.exportandoXLSX) return;
+            this.exportandoXLSX = true;
+            try {
+                const r = this.resultado;
+                const AZUL = 'FF0B4F6C';
+                const ROJO = 'FFB00020';
+                const BLANCO = 'FFFFFFFF';
+                const FONDO_TOTAL = 'FFE8F5E9';
 
-            const csv = filas
-                .map(fila => fila.map(c => '"' + String(c).replace(/"/g, '""') + '"').join(";"))
-                .join("\r\n");
-            // BOM al inicio: para que Excel detecte UTF-8 y no rompa tildes/ñ.
-            const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
-            const url = URL.createObjectURL(blob);
-            const enlace = document.createElement("a");
-            enlace.href = url;
-            enlace.download = `presupuesto_${this.tipologiaId || "obra"}.csv`;
-            document.body.appendChild(enlace);
-            enlace.click();
-            document.body.removeChild(enlace);
-            URL.revokeObjectURL(url);
+                const workbook = new ExcelJS.Workbook();
+                const hoja = workbook.addWorksheet('Presupuesto');
+                hoja.columns = [
+                    { width: 10 }, { width: 42 }, { width: 8 },
+                    { width: 12 }, { width: 14 }, { width: 16 }, { width: 14 },
+                ];
+
+                const bufferLogo = await (await fetch('images/logo1.png')).arrayBuffer();
+                const idLogo = workbook.addImage({ buffer: bufferLogo, extension: 'png' });
+                hoja.addImage(idLogo, { tl: { col: 0.1, row: 0.1 }, ext: { width: 130, height: 65 } });
+
+                hoja.mergeCells('B1:G3');
+                hoja.getCell('B1').value = 'PRESUPUESTO ESTIMATIVO';
+                hoja.getCell('B1').font = { bold: true, size: 16, color: { argb: AZUL } };
+                hoja.getCell('B1').alignment = { vertical: 'middle', horizontal: 'center' };
+
+                hoja.mergeCells('A5:G7');
+                const celdaAdvertencia = hoja.getCell('A5');
+                celdaAdvertencia.value = 'Nota: Este presupuesto corresponde a una cubicación y '
+                    + 'valorización referencial, a nivel de ingeniería conceptual. Los criterios y '
+                    + 'precios unitarios utilizados se basan en estudios y experiencias de este tipo de obras.';
+                celdaAdvertencia.font = { color: { argb: ROJO } };
+                celdaAdvertencia.alignment = { wrapText: true, vertical: 'top' };
+
+                hoja.mergeCells('A8:G8');
+                hoja.getCell('A8').value = r.tipologia;
+                hoja.getCell('A8').font = { bold: true, size: 13, color: { argb: AZUL } };
+
+                let fila = 10;
+                const encabezados = ['Item', 'Descripción', 'Un.', 'Cantidad', 'P.U. ($)', 'Subtotal ($)', 'Subtotal (UF)'];
+                const filaEncabezado = hoja.getRow(fila);
+                filaEncabezado.values = encabezados;
+                filaEncabezado.eachCell(c => {
+                    c.font = { bold: true, color: { argb: BLANCO } };
+                    c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: AZUL } };
+                    c.alignment = { horizontal: 'center' };
+                });
+                fila++;
+
+                const escribirPartida = (p) => {
+                    hoja.getRow(fila).values = [
+                        p.item, p.descripcion, p.unidad,
+                        p.cantidad, p.precio_clp, p.subtotal_clp, this.ufDe(p.subtotal_clp),
+                    ];
+                    fila++;
+                };
+                const escribirCapitulo = (numero, titulo, subtotal_clp) => {
+                    const f = hoja.getRow(fila);
+                    f.values = [numero, titulo, '', '', '', subtotal_clp, this.ufDe(subtotal_clp)];
+                    f.eachCell(c => {
+                        c.font = { bold: true, color: { argb: BLANCO } };
+                        c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: AZUL } };
+                    });
+                    fila++;
+                };
+                for (const cap of r.capitulos) {
+                    escribirCapitulo(cap.numero, cap.titulo, cap.subtotal_clp);
+                    for (const p of cap.partidas) escribirPartida(p);
+                    for (const sub of cap.subcapitulos) {
+                        escribirCapitulo(sub.numero, sub.titulo, sub.subtotal_clp);
+                        for (const p of sub.partidas) escribirPartida(p);
+                    }
+                }
+
+                fila++;
+                const filaTituloResumen = hoja.getRow(fila);
+                filaTituloResumen.values = ['Resumen', '', '', '', '', '$', 'UF'];
+                filaTituloResumen.eachCell(c => {
+                    c.font = { bold: true, color: { argb: BLANCO } };
+                    c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: AZUL } };
+                });
+                fila++;
+
+                const escribirResumen = (etiqueta, monto, destacado) => {
+                    const f = hoja.getRow(fila);
+                    f.values = [etiqueta, '', '', '', '', monto.clp, this.ufDe(monto.clp)];
+                    if (destacado) {
+                        f.font = { bold: true };
+                        f.eachCell(c => c.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: FONDO_TOTAL } });
+                    }
+                    fila++;
+                };
+                escribirResumen('Costo directo', r.resumen.costo_directo, false);
+                escribirResumen(`Gastos generales (${r.porcentajes.gastos_generales}%)`, r.resumen.gastos_generales, false);
+                escribirResumen(`Utilidades (${r.porcentajes.utilidades}%)`, r.resumen.utilidades, false);
+                escribirResumen(`Imprevistos (${r.porcentajes.imprevistos}%)`, r.resumen.imprevistos, false);
+                escribirResumen('Costo total neto', r.resumen.neto, false);
+                escribirResumen(`IVA (${r.porcentajes.iva}%)`, r.resumen.iva, false);
+                escribirResumen('TOTAL CON IVA', r.resumen.total, true);
+
+                fila += 2;
+                hoja.mergeCells(`A${fila}:G${fila}`);
+                hoja.getCell(`A${fila}`).value = 'Notas';
+                hoja.getCell(`A${fila}`).font = { bold: true, size: 12, color: { argb: AZUL } };
+                fila++;
+
+                hoja.mergeCells(`A${fila}:G${fila}`);
+                hoja.getCell(`A${fila}`).value = 'Fecha de emisión: ' + this.fechaHoy();
+                fila++;
+
+                for (const nota of r.notas) {
+                    hoja.mergeCells(`A${fila}:G${fila}`);
+                    const c = hoja.getCell(`A${fila}`);
+                    c.value = nota;
+                    c.alignment = { wrapText: true };
+                    fila++;
+                }
+
+                const buffer = await workbook.xlsx.writeBuffer();
+                const blob = new Blob([buffer], {
+                    type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                });
+                const url = URL.createObjectURL(blob);
+                const enlace = document.createElement('a');
+                enlace.href = url;
+                enlace.download = `presupuesto_${this.tipologiaId || 'obra'}.xlsx`;
+                document.body.appendChild(enlace);
+                enlace.click();
+                document.body.removeChild(enlace);
+                URL.revokeObjectURL(url);
+            } finally {
+                this.exportandoXLSX = false;
+            }
         },
         exportarPDF() {
             if (!this.resultado) return;
