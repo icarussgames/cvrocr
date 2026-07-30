@@ -10,7 +10,8 @@
  */
 function excedentes($escarpe, $excavacion, $relleno) {
     $excedente_escarpe = $escarpe * (1 + ESPONJAMIENTO);
-    $saldo = $excavacion - $relleno;
-    $excedente_excavacion = $saldo > 0 ? $saldo * (1 + ESPONJAMIENTO) : 0.0;
+    $saldo = $excavacion * (1 + ESPONJAMIENTO) - $relleno / (COMPACTACION);
+    $excedente_excavacion = $saldo > 0 ? $saldo: 0.0;
     return [$excedente_escarpe, $excedente_excavacion, $excedente_escarpe + $excedente_excavacion];
+
 }
