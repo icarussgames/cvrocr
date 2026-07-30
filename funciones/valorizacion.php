@@ -23,7 +23,7 @@ function listar_vectores_precio() {
     foreach ($encabezado as $columna) {
         if (strpos($columna, PREFIJO_VECTOR_PRECIO) === 0) {
             $resto = ltrim(substr($columna, strlen(PREFIJO_VECTOR_PRECIO)), '_');
-            $etiqueta = $resto !== '' ? ucfirst(str_replace('_', ' ', $resto)) : 'Precios base';
+            $etiqueta = $resto !== '' ? ucwords(str_replace('_', ' ', $resto)) : 'Precios base';
             $vectores[] = ['id' => $columna, 'etiqueta' => $etiqueta];
         }
     }
