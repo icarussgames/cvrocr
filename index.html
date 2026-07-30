@@ -371,11 +371,38 @@
         padding-bottom: 0.8rem;
         margin: 0.8rem 0 1.2rem;
     }
+    .fila-logo-titulo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .titulo-exportar {
+        flex: 1;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #0b4f6c;
+        font-size: 1.56rem; /* 120% del texto de tipología (1.3rem) */
+    }
+    .advertencia-exportar {
+        margin: 0.8rem 0 0.6rem;
+        color: #b00020;
+        font-weight: normal;
+        font-size: 1.3rem; /* 100% del texto de tipología */
+    }
     .encabezado-exportar h2 {
         margin: 0 0 0.3rem;
         color: #0b4f6c;
+        font-size: 1.3rem;
     }
-    .encabezado-exportar p { margin: 0 0 0.6rem; color: #444; font-size: 0.9rem; }
+    .notas-exportar { margin-top: 1.4rem; }
+    .notas-exportar h2 {
+        margin: 0 0 0.6rem;
+        color: #0b4f6c;
+        font-size: 1.05rem;
+        border-bottom: 2px solid #0b4f6c;
+        padding-bottom: 0.3rem;
+    }
 
     .resumen { margin-top: 1rem; }
     .resumen td.total, .resumen th.total { background: #e8f5e9; font-weight: bold; }
@@ -780,14 +807,20 @@
 
                 <!-- Documento formateado: esto es lo único que sale al imprimir -->
                 <div id="zona-imprimible" class="documento-exportar">
-                    <img src="images/logo1.png" class="logo-exportar" alt="Logo">
-
                     <div class="encabezado-exportar">
-                        <h2>{{ resultado.tipologia }}</h2>
-                        <p>
-                            Fecha: {{ fechaHoy() }} &nbsp;|&nbsp;
-                            Valor UF utilizado: ${{ formato(ufActual, 2) }}
+                        <div class="fila-logo-titulo">
+                            <img src="images/logo1.png" class="logo-exportar" alt="Logo">
+                            <span class="titulo-exportar">Presupuesto Estimativo</span>
+                        </div>
+
+                        <p class="advertencia-exportar">
+                            Nota: Este presupuesto corresponde a una cubicación y valorización
+                            referencial, a nivel de ingeniería conceptual. Los criterios y
+                            precios unitarios utilizados se basan en estudios y experiencias
+                            de este tipo de obras.
                         </p>
+
+                        <h2>{{ resultado.tipologia }}</h2>
                         <div v-for="info in resultado.informativos" :key="info.nombre" class="info-calculada">
                             {{ info.nombre }}: <strong>{{ info.valor }} {{ info.unidad }}</strong>
                         </div>
@@ -891,6 +924,14 @@
                             </tr>
                         </tbody>
                     </table>
+
+                    <div class="notas-exportar">
+                        <h2>Notas</h2>
+                        <div class="info-calculada">Fecha de emisión: <strong>{{ fechaHoy() }}</strong></div>
+                        <div v-for="(nota, i) in resultado.notas" :key="'notaExp'+i" class="nota-libre">
+                            {{ nota }}
+                        </div>
+                    </div>
                 </div>
             </template>
         </div>
