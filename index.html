@@ -86,11 +86,14 @@
         display: block;
         font-size: 0.78rem;
         font-weight: bold;
-        color: #0b4f6c;
+        color: #000;
         text-transform: uppercase;
         letter-spacing: 0.02em;
         margin-bottom: 0.2rem;
     }
+    .col-acerca .nombre-acerca { color: #0b4f6c; }
+    .col-acerca .organizacion-acerca { color: #0b4f6c; font-weight: bold; }
+    .logo-acerca { height: 80px; width: auto; display: block; margin: 0 auto 1.2rem; }
     .col-resultados { min-width: 480px; }
     #panel-tipologia { width: 100%; }
     #panel-datos { flex: 1 1 100%; display: flex; align-items: stretch; gap: 1.5rem; }
@@ -896,19 +899,22 @@
     <main v-if="pestanaActiva === 'acerca'">
         <div class="panel" id="panel-acerca">
             <div class="col-acerca">
-                <h2>Acerca de</h2>
+                <img src="images/logo1.png" class="logo-acerca" alt="Logo">
+                <p>El presente desarrollo informático ha sido<br>elaborado en el marco del estudio<br>"Diagnóstico Obras de Conducción, Regiones<br>de Atacama y Coquimbo", financiado<br>por la Comisión Nacional de Riego</p>
 
-                <span class="etiqueta-acerca">Cliente</span>
-                <p>[Nombre del cliente]</p>
+                <span class="etiqueta-acerca">autores</span>
+                <p><span class="nombre-acerca">Jaime Vargas Paysen<br>Eugenio Tobar Espinoza</span><br><span class="organizacion-acerca">AQUATERRA INGENIEROS LTDA</span></p>
 
-                <span class="etiqueta-acerca">Equipo desarrollador</span>
-                <p>[Nombre integrante 1]<br>[Nombre integrante 2]<br>[Nombre integrante 3]</p>
+                <span class="etiqueta-acerca">ASESOR</span>
+                <p><span class="nombre-acerca">Javier Cadenas Parra</span><br><span class="organizacion-acerca">Comisión Nacional de Riego (CNR)</span></p>
 
-                <span class="etiqueta-acerca">Descripción</span>
-                <p>[Breve descripción del proyecto y su propósito.]</p>
+                <span class="etiqueta-acerca">desarrollo informático</span>
+                <p><span class="nombre-acerca">Javier Rovegno Campos</span><br><span class="organizacion-acerca">AQUATERRA INGENIEROS LTDA</span></p>
 
-                <span class="etiqueta-acerca">Versión</span>
-                <p>[Versión actual del sistema]</p>
+                <span class="etiqueta-acerca">supervisor estudio</span>
+                <p><span class="nombre-acerca">Patricio Espinoza Caniullán</span><br><span class="organizacion-acerca">Comisión Nacional de Riego (CNR)</span></p>
+
+                <p>Versión 0.5<br>Año 2026</p>
             </div>
         </div>
     </main>
