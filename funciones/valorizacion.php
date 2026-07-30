@@ -146,7 +146,7 @@ function listar_tipologias() {
     global $TIPOLOGIAS;
     $salida = [];
     foreach ($TIPOLOGIAS as $id => $t) {
-        $salida[] = ['id' => $id, 'titulo' => $t['titulo'], 'campos' => $t['campos']];
+        $salida[] = ['id' => $id, 'titulo' => $t['titulo'], 'campos' => $t['campos'], 'esquema' => $t['esquema'] ?? null];
     }
     return $salida;
 }

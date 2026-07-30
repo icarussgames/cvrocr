@@ -528,10 +528,9 @@
 
             <!-- Columna derecha: figuras esquemáticas y textos explicativos -->
             <div class="col-figuras">
-                <img v-if="tipologiaId === 'revestimiento_canal'"
-                     class="figura-esquema" src="images/esquema_revest.png" alt="Esquema de revestimiento de canal">
-                <img v-else-if="tipologiaId === 'reja_sifon' || tipologiaId === 'reparacion_sifon'"
-                     class="figura-esquema" src="images/esquema-sifon.png" alt="Esquema del sifón">
+                <img v-if="tipologiaActual && tipologiaActual.esquema"
+                     class="figura-esquema" :src="'images/' + tipologiaActual.esquema"
+                     :alt="'Esquema de ' + tipologiaActual.titulo">
                 <span v-else>
                     Aquí irán las figuras esquemáticas y textos explicativos de
                     cada parámetro.

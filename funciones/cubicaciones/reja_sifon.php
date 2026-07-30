@@ -46,6 +46,7 @@ function _reja_sifon($p) {
 
 $TIPOLOGIAS['reja_sifon'] = [
     'titulo' => 'Mejoramiento sifon en obra de entrada (reja)',
+    'esquema' => 'esquema-sifon.png',
     'campos' => [
         _campo('base', 'Ancho de la boca', 'm', 1.0,
             'Ancho de la boca de entrada del sifon, donde va instalada la reja.'),

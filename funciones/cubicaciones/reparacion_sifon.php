@@ -53,6 +53,7 @@ function _reparacion_sifon($p) {
 
 $TIPOLOGIAS['reparacion_sifon'] = [
     'titulo' => 'Restauracion tramo sifon',
+    'esquema' => 'esquema-sifon.png',
     'campos' => [
         _campo('largo', 'Largo del tramo', 'm', 20.0,
             'Longitud del tramo de sifon a restaurar.'),
