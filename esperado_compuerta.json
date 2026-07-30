@@ -1,0 +1,143 @@
+{
+  "tipologia": "Reposicion de compuerta",
+  "partidas": [
+    {
+      "codigo": "MT035",
+      "descripcion": "Instalacion de faenas",
+      "unidad": "gl",
+      "cantidad": 1,
+      "precio_clp": 1999300,
+      "subtotal_clp": 1999300,
+      "subtotal_uf": 50.18
+    },
+    {
+      "codigo": "MT042",
+      "descripcion": "Compuerta metalica con mecanismo de izaje",
+      "unidad": "un",
+      "cantidad": 1,
+      "precio_clp": 2500000,
+      "subtotal_clp": 2500000,
+      "subtotal_uf": 62.75
+    },
+    {
+      "codigo": "MT027",
+      "descripcion": "Escarpe y destronque de la faja",
+      "unidad": "m3",
+      "cantidad": 4.5,
+      "precio_clp": 1197,
+      "subtotal_clp": 5386,
+      "subtotal_uf": 0.14
+    },
+    {
+      "codigo": "MT021",
+      "descripcion": "Excavacion con maquina",
+      "unidad": "m3",
+      "cantidad": 1.3,
+      "precio_clp": 4344,
+      "subtotal_clp": 5647,
+      "subtotal_uf": 0.14
+    },
+    {
+      "codigo": "MT024",
+      "descripcion": "Relleno material granular compactado",
+      "unidad": "m3",
+      "cantidad": 1.0,
+      "precio_clp": 32008,
+      "subtotal_clp": 32008,
+      "subtotal_uf": 0.8
+    },
+    {
+      "codigo": "MT036",
+      "descripcion": "Demolicion de hormigon existente",
+      "unidad": "m3",
+      "cantidad": 1.05,
+      "precio_clp": 45000,
+      "subtotal_clp": 47250,
+      "subtotal_uf": 1.19
+    },
+    {
+      "codigo": "MT033",
+      "descripcion": "Manejo y transporte a botadero",
+      "unidad": "m3",
+      "cantidad": 6.33,
+      "precio_clp": 3600,
+      "subtotal_clp": 22788,
+      "subtotal_uf": 0.57
+    },
+    {
+      "codigo": "MT003",
+      "descripcion": "Hormigon estructural G25",
+      "unidad": "m3",
+      "cantidad": 2.1,
+      "precio_clp": 189220,
+      "subtotal_clp": 397362,
+      "subtotal_uf": 9.97
+    },
+    {
+      "codigo": "MT011",
+      "descripcion": "Enfierradura (acero de refuerzo)",
+      "unidad": "kg",
+      "cantidad": 168.0,
+      "precio_clp": 3959,
+      "subtotal_clp": 665112,
+      "subtotal_uf": 16.69
+    },
+    {
+      "codigo": "MT018",
+      "descripcion": "Moldaje",
+      "unidad": "m2",
+      "cantidad": 25.2,
+      "precio_clp": 19616,
+      "subtotal_clp": 494323,
+      "subtotal_uf": 12.41
+    },
+    {
+      "codigo": "MT040",
+      "descripcion": "Aplicacion de Antisol (curado quimico)",
+      "unidad": "m2",
+      "cantidad": 25.2,
+      "precio_clp": 358,
+      "subtotal_clp": 9022,
+      "subtotal_uf": 0.23
+    }
+  ],
+  "informativos": [],
+  "porcentajes": {
+    "gastos_generales": 8.0,
+    "utilidades": 15.0,
+    "imprevistos": 1.0,
+    "iva": 19.0
+  },
+  "resumen": {
+    "costo_directo": {
+      "clp": 6178198,
+      "uf": 155.07
+    },
+    "gastos_generales": {
+      "clp": 494256,
+      "uf": 12.41
+    },
+    "utilidades": {
+      "clp": 926730,
+      "uf": 23.26
+    },
+    "imprevistos": {
+      "clp": 61782,
+      "uf": 1.55
+    },
+    "neto": {
+      "clp": 7660966,
+      "uf": 192.29
+    },
+    "iva": {
+      "clp": 1455584,
+      "uf": 36.53
+    },
+    "total": {
+      "clp": 9116550,
+      "uf": 228.82
+    }
+  },
+  "uf_clp": 39841.72,
+  "vector_precio": "precio_clp"
+}

@@ -1,0 +1,149 @@
+{
+  "tipologia": "Mejoramiento disipador de energia",
+  "partidas": [
+    {
+      "codigo": "MT035",
+      "descripcion": "Instalacion de faenas",
+      "unidad": "gl",
+      "cantidad": 1,
+      "precio_clp": 1999300,
+      "subtotal_clp": 1999300,
+      "subtotal_uf": 50.18
+    },
+    {
+      "codigo": "MT027",
+      "descripcion": "Escarpe y destronque de la faja",
+      "unidad": "m3",
+      "cantidad": 8.8,
+      "precio_clp": 1197,
+      "subtotal_clp": 10532,
+      "subtotal_uf": 0.26
+    },
+    {
+      "codigo": "MT021",
+      "descripcion": "Excavacion con maquina",
+      "unidad": "m3",
+      "cantidad": 8.38,
+      "precio_clp": 4344,
+      "subtotal_clp": 36401,
+      "subtotal_uf": 0.91
+    },
+    {
+      "codigo": "MT024",
+      "descripcion": "Relleno material granular compactado",
+      "unidad": "m3",
+      "cantidad": 11.31,
+      "precio_clp": 32008,
+      "subtotal_clp": 362094,
+      "subtotal_uf": 9.09
+    },
+    {
+      "codigo": "MT033",
+      "descripcion": "Manejo y transporte a botadero",
+      "unidad": "m3",
+      "cantidad": 9.68,
+      "precio_clp": 3600,
+      "subtotal_clp": 34843,
+      "subtotal_uf": 0.87
+    },
+    {
+      "codigo": "MT001",
+      "descripcion": "Emplantillado hormigon G05",
+      "unidad": "m3",
+      "cantidad": 0.59,
+      "precio_clp": 181136,
+      "subtotal_clp": 106251,
+      "subtotal_uf": 2.67
+    },
+    {
+      "codigo": "MT026",
+      "descripcion": "Base granular",
+      "unidad": "m3",
+      "cantidad": 1.17,
+      "precio_clp": 25000,
+      "subtotal_clp": 29329,
+      "subtotal_uf": 0.74
+    },
+    {
+      "codigo": "MT003",
+      "descripcion": "Hormigon estructural G25",
+      "unidad": "m3",
+      "cantidad": 7.02,
+      "precio_clp": 189220,
+      "subtotal_clp": 1327756,
+      "subtotal_uf": 33.33
+    },
+    {
+      "codigo": "MT011",
+      "descripcion": "Enfierradura (acero de refuerzo)",
+      "unidad": "kg",
+      "cantidad": 561.36,
+      "precio_clp": 3959,
+      "subtotal_clp": 2222422,
+      "subtotal_uf": 55.78
+    },
+    {
+      "codigo": "MT018",
+      "descripcion": "Moldaje",
+      "unidad": "m2",
+      "cantidad": 70.17,
+      "precio_clp": 19616,
+      "subtotal_clp": 1376453,
+      "subtotal_uf": 34.55
+    },
+    {
+      "codigo": "MT040",
+      "descripcion": "Aplicacion de Antisol (curado quimico)",
+      "unidad": "m2",
+      "cantidad": 46.71,
+      "precio_clp": 358,
+      "subtotal_clp": 16721,
+      "subtotal_uf": 0.42
+    }
+  ],
+  "informativos": [
+    {
+      "nombre": "Largo del disipador",
+      "valor": 8.38,
+      "unidad": "m"
+    }
+  ],
+  "porcentajes": {
+    "gastos_generales": 8.0,
+    "utilidades": 15.0,
+    "imprevistos": 1.0,
+    "iva": 19.0
+  },
+  "resumen": {
+    "costo_directo": {
+      "clp": 7522102,
+      "uf": 188.8
+    },
+    "gastos_generales": {
+      "clp": 601768,
+      "uf": 15.1
+    },
+    "utilidades": {
+      "clp": 1128315,
+      "uf": 28.32
+    },
+    "imprevistos": {
+      "clp": 75221,
+      "uf": 1.89
+    },
+    "neto": {
+      "clp": 9327407,
+      "uf": 234.11
+    },
+    "iva": {
+      "clp": 1772207,
+      "uf": 44.48
+    },
+    "total": {
+      "clp": 11099614,
+      "uf": 278.59
+    }
+  },
+  "uf_clp": 39841.72,
+  "vector_precio": "precio_clp"
+}

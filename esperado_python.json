@@ -1,0 +1,386 @@
+{
+  "tipologia": "Revestimiento del canal en hormigon armado",
+  "partidas": [
+    {
+      "codigo": "MT035",
+      "descripcion": "Instalacion de faenas",
+      "unidad": "gl",
+      "cantidad": 1,
+      "precio_clp": 1999300,
+      "subtotal_clp": 1999300,
+      "subtotal_uf": 50.18
+    },
+    {
+      "codigo": "MT027",
+      "descripcion": "Escarpe y destronque de la faja",
+      "unidad": "m3",
+      "cantidad": 168.9,
+      "precio_clp": 1197,
+      "subtotal_clp": 202173,
+      "subtotal_uf": 5.07
+    },
+    {
+      "codigo": "MT021",
+      "descripcion": "Excavacion con maquina",
+      "unidad": "m3",
+      "cantidad": 259.9,
+      "precio_clp": 4344,
+      "subtotal_clp": 1129006,
+      "subtotal_uf": 28.34
+    },
+    {
+      "codigo": "MT024",
+      "descripcion": "Relleno material granular compactado",
+      "unidad": "m3",
+      "cantidad": 128.0,
+      "precio_clp": 32008,
+      "subtotal_clp": 4097024,
+      "subtotal_uf": 102.83
+    },
+    {
+      "codigo": "MT033",
+      "descripcion": "Manejo y transporte a botadero",
+      "unidad": "m3",
+      "cantidad": 330.88,
+      "precio_clp": 3600,
+      "subtotal_clp": 1191168,
+      "subtotal_uf": 29.9
+    },
+    {
+      "codigo": "MT001",
+      "descripcion": "Emplantillado hormigon G05",
+      "unidad": "m3",
+      "cantidad": 6.3,
+      "precio_clp": 181136,
+      "subtotal_clp": 1141157,
+      "subtotal_uf": 28.64
+    },
+    {
+      "codigo": "MT026",
+      "descripcion": "Base granular",
+      "unidad": "m3",
+      "cantidad": 12.6,
+      "precio_clp": 25000,
+      "subtotal_clp": 315000,
+      "subtotal_uf": 7.91
+    },
+    {
+      "codigo": "MT003",
+      "descripcion": "Hormigon estructural G25",
+      "unidad": "m3",
+      "cantidad": 42.38,
+      "precio_clp": 189220,
+      "subtotal_clp": 8019144,
+      "subtotal_uf": 201.28
+    },
+    {
+      "codigo": "MT011",
+      "descripcion": "Enfierradura (acero de refuerzo)",
+      "unidad": "kg",
+      "cantidad": 4335.76,
+      "precio_clp": 3959,
+      "subtotal_clp": 17165274,
+      "subtotal_uf": 430.84
+    },
+    {
+      "codigo": "MT018",
+      "descripcion": "Moldaje",
+      "unidad": "m2",
+      "cantidad": 423.8,
+      "precio_clp": 19616,
+      "subtotal_clp": 8313261,
+      "subtotal_uf": 208.66
+    },
+    {
+      "codigo": "MT026",
+      "descripcion": "Base estabilizada muros de ala",
+      "unidad": "m3",
+      "cantidad": 0.08,
+      "precio_clp": 25000,
+      "subtotal_clp": 2119,
+      "subtotal_uf": 0.05
+    },
+    {
+      "codigo": "MT003",
+      "descripcion": "Hormigón muros de ala",
+      "unidad": "m3",
+      "cantidad": 0.98,
+      "precio_clp": 189220,
+      "subtotal_clp": 184981,
+      "subtotal_uf": 4.64
+    },
+    {
+      "codigo": "MT018",
+      "descripcion": "Moldaje muros de ala",
+      "unidad": "m2",
+      "cantidad": 16.15,
+      "precio_clp": 19616,
+      "subtotal_clp": 316751,
+      "subtotal_uf": 7.95
+    },
+    {
+      "codigo": "MT020",
+      "descripcion": "Juntas de dilatacion",
+      "unidad": "m",
+      "cantidad": 60.0,
+      "precio_clp": 8500,
+      "subtotal_clp": 510000,
+      "subtotal_uf": 12.8
+    },
+    {
+      "codigo": "MT040",
+      "descripcion": "Aplicacion de Antisol (curado quimico)",
+      "unidad": "m2",
+      "cantidad": 400.0,
+      "precio_clp": 358,
+      "subtotal_clp": 143200,
+      "subtotal_uf": 3.59
+    }
+  ],
+  "capitulos": [
+    {
+      "numero": "1",
+      "titulo": "Instalación de faenas",
+      "partidas": [
+        {
+          "codigo": "MT035",
+          "descripcion": "Instalacion de faenas",
+          "unidad": "gl",
+          "cantidad": 1,
+          "precio_clp": 1999300,
+          "subtotal_clp": 1999300,
+          "subtotal_uf": 50.18,
+          "item": "1.1"
+        }
+      ],
+      "subcapitulos": [],
+      "subtotal_clp": 1999300,
+      "subtotal_uf": 50.18
+    },
+    {
+      "numero": "2",
+      "titulo": "Tramo revestido",
+      "partidas": [],
+      "subcapitulos": [
+        {
+          "numero": "2.1",
+          "titulo": "Movimiento de tierras",
+          "partidas": [
+            {
+              "codigo": "MT027",
+              "descripcion": "Escarpe y destronque de la faja",
+              "unidad": "m3",
+              "cantidad": 168.9,
+              "precio_clp": 1197,
+              "subtotal_clp": 202173,
+              "subtotal_uf": 5.07,
+              "item": "2.1.1"
+            },
+            {
+              "codigo": "MT021",
+              "descripcion": "Excavacion con maquina",
+              "unidad": "m3",
+              "cantidad": 259.9,
+              "precio_clp": 4344,
+              "subtotal_clp": 1129006,
+              "subtotal_uf": 28.34,
+              "item": "2.1.2"
+            },
+            {
+              "codigo": "MT024",
+              "descripcion": "Relleno material granular compactado",
+              "unidad": "m3",
+              "cantidad": 128.0,
+              "precio_clp": 32008,
+              "subtotal_clp": 4097024,
+              "subtotal_uf": 102.83,
+              "item": "2.1.3"
+            },
+            {
+              "codigo": "MT033",
+              "descripcion": "Manejo y transporte a botadero",
+              "unidad": "m3",
+              "cantidad": 330.88,
+              "precio_clp": 3600,
+              "subtotal_clp": 1191168,
+              "subtotal_uf": 29.9,
+              "item": "2.1.4"
+            }
+          ],
+          "subtotal_clp": 6619371,
+          "subtotal_uf": 166.14
+        },
+        {
+          "numero": "2.2",
+          "titulo": "Hormigones",
+          "partidas": [
+            {
+              "codigo": "MT001",
+              "descripcion": "Emplantillado hormigon G05",
+              "unidad": "m3",
+              "cantidad": 6.3,
+              "precio_clp": 181136,
+              "subtotal_clp": 1141157,
+              "subtotal_uf": 28.64,
+              "item": "2.2.1"
+            },
+            {
+              "codigo": "MT026",
+              "descripcion": "Base granular",
+              "unidad": "m3",
+              "cantidad": 12.6,
+              "precio_clp": 25000,
+              "subtotal_clp": 315000,
+              "subtotal_uf": 7.91,
+              "item": "2.2.2"
+            },
+            {
+              "codigo": "MT003",
+              "descripcion": "Hormigon estructural G25",
+              "unidad": "m3",
+              "cantidad": 42.38,
+              "precio_clp": 189220,
+              "subtotal_clp": 8019144,
+              "subtotal_uf": 201.28,
+              "item": "2.2.3"
+            },
+            {
+              "codigo": "MT011",
+              "descripcion": "Enfierradura (acero de refuerzo)",
+              "unidad": "kg",
+              "cantidad": 4335.76,
+              "precio_clp": 3959,
+              "subtotal_clp": 17165274,
+              "subtotal_uf": 430.84,
+              "item": "2.2.4"
+            },
+            {
+              "codigo": "MT018",
+              "descripcion": "Moldaje",
+              "unidad": "m2",
+              "cantidad": 423.8,
+              "precio_clp": 19616,
+              "subtotal_clp": 8313261,
+              "subtotal_uf": 208.66,
+              "item": "2.2.5"
+            }
+          ],
+          "subtotal_clp": 34953836,
+          "subtotal_uf": 877.33
+        },
+        {
+          "numero": "2.3",
+          "titulo": "Muros de ala",
+          "partidas": [
+            {
+              "codigo": "MT026",
+              "descripcion": "Base estabilizada muros de ala",
+              "unidad": "m3",
+              "cantidad": 0.08,
+              "precio_clp": 25000,
+              "subtotal_clp": 2119,
+              "subtotal_uf": 0.05,
+              "item": "2.3.1"
+            },
+            {
+              "codigo": "MT003",
+              "descripcion": "Hormigón muros de ala",
+              "unidad": "m3",
+              "cantidad": 0.98,
+              "precio_clp": 189220,
+              "subtotal_clp": 184981,
+              "subtotal_uf": 4.64,
+              "item": "2.3.2"
+            },
+            {
+              "codigo": "MT018",
+              "descripcion": "Moldaje muros de ala",
+              "unidad": "m2",
+              "cantidad": 16.15,
+              "precio_clp": 19616,
+              "subtotal_clp": 316751,
+              "subtotal_uf": 7.95,
+              "item": "2.3.3"
+            }
+          ],
+          "subtotal_clp": 503851,
+          "subtotal_uf": 12.64
+        }
+      ],
+      "subtotal_clp": 42077058,
+      "subtotal_uf": 1056.11
+    },
+    {
+      "numero": "3",
+      "titulo": "Obras adicionales",
+      "partidas": [
+        {
+          "codigo": "MT020",
+          "descripcion": "Juntas de dilatacion",
+          "unidad": "m",
+          "cantidad": 60.0,
+          "precio_clp": 8500,
+          "subtotal_clp": 510000,
+          "subtotal_uf": 12.8,
+          "item": "3.1"
+        },
+        {
+          "codigo": "MT040",
+          "descripcion": "Aplicacion de Antisol (curado quimico)",
+          "unidad": "m2",
+          "cantidad": 400.0,
+          "precio_clp": 358,
+          "subtotal_clp": 143200,
+          "subtotal_uf": 3.59,
+          "item": "3.2"
+        }
+      ],
+      "subcapitulos": [],
+      "subtotal_clp": 653200,
+      "subtotal_uf": 16.39
+    }
+  ],
+  "informativos": [],
+  "notas": [
+    "Sección de flujo teórica (asumiendo v = 1.2 m/s): 0.558 m². Sección resultante de la geometría ingresada (ancho, alto y talud): 1 m².",
+    "Incluye muros de ala en inicio y término del tramo (largo de ala = ancho del canal, profundidad bajo revestimiento = 0.5 m)."
+  ],
+  "porcentajes": {
+    "gastos_generales": 8.0,
+    "utilidades": 15.0,
+    "imprevistos": 1.0,
+    "iva": 19.0
+  },
+  "resumen": {
+    "costo_directo": {
+      "clp": 44729558,
+      "uf": 1122.68
+    },
+    "gastos_generales": {
+      "clp": 3578365,
+      "uf": 89.81
+    },
+    "utilidades": {
+      "clp": 6709434,
+      "uf": 168.4
+    },
+    "imprevistos": {
+      "clp": 447296,
+      "uf": 11.23
+    },
+    "neto": {
+      "clp": 55464652,
+      "uf": 1392.12
+    },
+    "iva": {
+      "clp": 10538284,
+      "uf": 264.5
+    },
+    "total": {
+      "clp": 66002935,
+      "uf": 1656.63
+    }
+  },
+  "uf_clp": 39841.72,
+  "vector_precio": "precio_clp"
+}
