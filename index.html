@@ -394,6 +394,8 @@
         margin: 0 0 0.3rem;
         color: #0b4f6c;
         font-size: 1.3rem;
+        border-bottom: none;
+        padding-bottom: 0;
     }
     .notas-exportar { margin-top: 1.4rem; }
     .notas-exportar h2 {
@@ -821,9 +823,6 @@
                         </p>
 
                         <h2>{{ resultado.tipologia }}</h2>
-                        <div v-for="info in resultado.informativos" :key="info.nombre" class="info-calculada">
-                            {{ info.nombre }}: <strong>{{ info.valor }} {{ info.unidad }}</strong>
-                        </div>
                     </div>
 
                     <table style="margin-top:0.8rem">
