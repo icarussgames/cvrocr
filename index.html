@@ -78,6 +78,19 @@
         padding-bottom: 0rem;
     }
     #panel-presupuesto { flex: 1 1 100%; }
+    #panel-acerca { width: 100%; display: flex; justify-content: center; }
+    .col-acerca { max-width: 640px; text-align: center; }
+    .col-acerca h2 { text-align: center; }
+    .col-acerca p { margin: 0.3rem 0 1.1rem; line-height: 1.5; color: #333; }
+    .col-acerca .etiqueta-acerca {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: bold;
+        color: #0b4f6c;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        margin-bottom: 0.2rem;
+    }
     .col-resultados { min-width: 480px; }
     #panel-tipologia { width: 100%; }
     #panel-datos { flex: 1 1 100%; display: flex; align-items: stretch; gap: 1.5rem; }
@@ -430,6 +443,9 @@
         <button :class="{activa: pestanaActiva === 'exportar'}"
                 :disabled="!resultado" @click="pestanaActiva = 'exportar'">
             Exportar Resultado
+        </button>
+        <button :class="{activa: pestanaActiva === 'acerca'}" @click="pestanaActiva = 'acerca'">
+            Acerca de
         </button>
     </nav>
 
@@ -874,6 +890,26 @@
                     </table>
                 </div>
             </template>
+        </div>
+    </main>
+
+    <main v-if="pestanaActiva === 'acerca'">
+        <div class="panel" id="panel-acerca">
+            <div class="col-acerca">
+                <h2>Acerca de</h2>
+
+                <span class="etiqueta-acerca">Cliente</span>
+                <p>[Nombre del cliente]</p>
+
+                <span class="etiqueta-acerca">Equipo desarrollador</span>
+                <p>[Nombre integrante 1]<br>[Nombre integrante 2]<br>[Nombre integrante 3]</p>
+
+                <span class="etiqueta-acerca">Descripción</span>
+                <p>[Breve descripción del proyecto y su propósito.]</p>
+
+                <span class="etiqueta-acerca">Versión</span>
+                <p>[Versión actual del sistema]</p>
+            </div>
         </div>
     </main>
 
