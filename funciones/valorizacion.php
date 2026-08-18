@@ -17,7 +17,7 @@ define('RUTA_PRECIOS', dirname(__DIR__) . '/precios.csv');
 
 function listar_vectores_precio() {
     $f = fopen(RUTA_PRECIOS, 'r');
-    $encabezado = fgetcsv($f);
+    $encabezado = fgetcsv($f, 0, ',', '"', '\\');
     fclose($f);
     $vectores = [];
     foreach ($encabezado as $columna) {
@@ -32,7 +32,7 @@ function listar_vectores_precio() {
 
 function cargar_precios($vector_precio) {
     $f = fopen(RUTA_PRECIOS, 'r');
-    $encabezado = fgetcsv($f);
+    $encabezado = fgetcsv($f, 0, ',', '"', '\\');
     $idx_vector = array_search($vector_precio, $encabezado);
     if ($idx_vector === false) {
         fclose($f);
@@ -43,7 +43,7 @@ function cargar_precios($vector_precio) {
     $idx_unidad = array_search('unidad', $encabezado);
 
     $precios = [];
-    while (($fila = fgetcsv($f)) !== false) {
+    while (($fila = fgetcsv($f, 0, ',', '"', '\\')) !== false) {
         $precios[$fila[$idx_codigo]] = [
             'descripcion' => $fila[$idx_desc],
             'unidad' => $fila[$idx_unidad],
