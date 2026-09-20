@@ -70,6 +70,8 @@ $reparacion_sifon = valorizar('reparacion_sifon', [
     'base' => 1.0,
     'altura' => 1.0,
     'espesor' => 0.2,
+    'diametro_tuberia' => 800.0,
+    'ancho_reja' => 1.0,
 ]);
 
 $sifon_cruce = valorizar('sifon_cruce', [
@@ -82,9 +84,20 @@ $sifon_cruce = valorizar('sifon_cruce', [
     'alto_caida' => 1.0,
 ]);
 
+$cajon_desarenador_reja = valorizar('cajon_desarenador_reja', [
+    'caudal' => 0.96,
+    'longitud_cajon' => 6.0,
+    'ancho_cajon' => 2.0,
+    'alto_cajon' => 1.5,
+    'alto_existente' => 1.8,
+    'ancho_existente' => 4.7,
+]);
+
 $reja_sifon = valorizar('reja_sifon', [
     'base' => 1.0,
     'altura' => 1.0,
+    'diametro_tuberia' => 800.0,
+    'ancho_reja' => 1.0,
 ]);
 
 $tunel_shotcrete = valorizar('tunel_shotcrete', [
@@ -104,6 +117,7 @@ echo json_encode([
     'canoa' => $canoa,
     'reparacion_sifon' => $reparacion_sifon,
     'sifon_cruce' => $sifon_cruce,
+    'cajon_desarenador_reja' => $cajon_desarenador_reja,
     'reja_sifon' => $reja_sifon,
     'tunel_shotcrete' => $tunel_shotcrete,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
