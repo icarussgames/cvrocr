@@ -1,0 +1,8 @@
+# CVROCR — PHP web service (APIs need PHP; not a static site)
+services:
+  - type: web
+    name: cvrocr
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
