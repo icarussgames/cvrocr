@@ -1,0 +1,338 @@
+{
+    "tipologia": "Construcción de Canoa en Cruce de Cauce Natural",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT027",
+            "descripcion": "Escarpe y destronque de la faja",
+            "unidad": "m3",
+            "cantidad": 10.08,
+            "precio_clp": 1197,
+            "subtotal_clp": 12066,
+            "subtotal_uf": 0.3
+        },
+        {
+            "codigo": "MT021",
+            "descripcion": "Excavacion con maquina",
+            "unidad": "m3",
+            "cantidad": 118.8,
+            "precio_clp": 4344,
+            "subtotal_clp": 516067,
+            "subtotal_uf": 12.95
+        },
+        {
+            "codigo": "MT024",
+            "descripcion": "Relleno material granular compactado",
+            "unidad": "m3",
+            "cantidad": 58.3,
+            "precio_clp": 32008,
+            "subtotal_clp": 1866066,
+            "subtotal_uf": 46.84
+        },
+        {
+            "codigo": "MT033",
+            "descripcion": "Manejo y transporte a botadero",
+            "unidad": "m3",
+            "cantidad": 76.99,
+            "precio_clp": 3600,
+            "subtotal_clp": 277165,
+            "subtotal_uf": 6.96
+        },
+        {
+            "codigo": "MT001",
+            "descripcion": "Emplantillado hormigon G05",
+            "unidad": "m3",
+            "cantidad": 0.38,
+            "precio_clp": 181136,
+            "subtotal_clp": 68832,
+            "subtotal_uf": 1.73
+        },
+        {
+            "codigo": "MT003",
+            "descripcion": "Hormigon estructural G25",
+            "unidad": "m3",
+            "cantidad": 29.86,
+            "precio_clp": 189220,
+            "subtotal_clp": 5650109,
+            "subtotal_uf": 141.81
+        },
+        {
+            "codigo": "MT011",
+            "descripcion": "Enfierradura (acero de refuerzo)",
+            "unidad": "kg",
+            "cantidad": 2986,
+            "precio_clp": 3959,
+            "subtotal_clp": 11821574,
+            "subtotal_uf": 296.71
+        },
+        {
+            "codigo": "MT018",
+            "descripcion": "Moldaje",
+            "unidad": "m2",
+            "cantidad": 174.6,
+            "precio_clp": 19616,
+            "subtotal_clp": 3424954,
+            "subtotal_uf": 85.96
+        },
+        {
+            "codigo": "MT040",
+            "descripcion": "Aplicacion de Antisol (curado quimico)",
+            "unidad": "m2",
+            "cantidad": 174.6,
+            "precio_clp": 358,
+            "subtotal_clp": 62507,
+            "subtotal_uf": 1.57
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Canoa de hormigón",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Movimiento de tierras",
+                    "partidas": [
+                        {
+                            "codigo": "MT027",
+                            "descripcion": "Escarpe y destronque de la faja",
+                            "unidad": "m3",
+                            "cantidad": 10.08,
+                            "precio_clp": 1197,
+                            "subtotal_clp": 12066,
+                            "subtotal_uf": 0.3,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT021",
+                            "descripcion": "Excavacion con maquina",
+                            "unidad": "m3",
+                            "cantidad": 118.8,
+                            "precio_clp": 4344,
+                            "subtotal_clp": 516067,
+                            "subtotal_uf": 12.95,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT024",
+                            "descripcion": "Relleno material granular compactado",
+                            "unidad": "m3",
+                            "cantidad": 58.3,
+                            "precio_clp": 32008,
+                            "subtotal_clp": 1866066,
+                            "subtotal_uf": 46.84,
+                            "item": "2.1.3"
+                        },
+                        {
+                            "codigo": "MT033",
+                            "descripcion": "Manejo y transporte a botadero",
+                            "unidad": "m3",
+                            "cantidad": 76.99,
+                            "precio_clp": 3600,
+                            "subtotal_clp": 277165,
+                            "subtotal_uf": 6.96,
+                            "item": "2.1.4"
+                        }
+                    ],
+                    "subtotal_clp": 2671364,
+                    "subtotal_uf": 67.05
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Hormigones",
+                    "partidas": [
+                        {
+                            "codigo": "MT001",
+                            "descripcion": "Emplantillado hormigon G05",
+                            "unidad": "m3",
+                            "cantidad": 0.38,
+                            "precio_clp": 181136,
+                            "subtotal_clp": 68832,
+                            "subtotal_uf": 1.73,
+                            "item": "2.2.1"
+                        },
+                        {
+                            "codigo": "MT003",
+                            "descripcion": "Hormigon estructural G25",
+                            "unidad": "m3",
+                            "cantidad": 29.86,
+                            "precio_clp": 189220,
+                            "subtotal_clp": 5650109,
+                            "subtotal_uf": 141.81,
+                            "item": "2.2.2"
+                        },
+                        {
+                            "codigo": "MT011",
+                            "descripcion": "Enfierradura (acero de refuerzo)",
+                            "unidad": "kg",
+                            "cantidad": 2986,
+                            "precio_clp": 3959,
+                            "subtotal_clp": 11821574,
+                            "subtotal_uf": 296.71,
+                            "item": "2.2.3"
+                        },
+                        {
+                            "codigo": "MT018",
+                            "descripcion": "Moldaje",
+                            "unidad": "m2",
+                            "cantidad": 174.6,
+                            "precio_clp": 19616,
+                            "subtotal_clp": 3424954,
+                            "subtotal_uf": 85.96,
+                            "item": "2.2.4"
+                        }
+                    ],
+                    "subtotal_clp": 20965469,
+                    "subtotal_uf": 526.21
+                }
+            ],
+            "subtotal_clp": 23636833,
+            "subtotal_uf": 593.26
+        },
+        {
+            "numero": "3",
+            "titulo": "Obras adicionales",
+            "partidas": [
+                {
+                    "codigo": "MT040",
+                    "descripcion": "Aplicacion de Antisol (curado quimico)",
+                    "unidad": "m2",
+                    "cantidad": 174.6,
+                    "precio_clp": 358,
+                    "subtotal_clp": 62507,
+                    "subtotal_uf": 1.57,
+                    "item": "3.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 62507,
+            "subtotal_uf": 1.57
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Volumen hormigón canoa (losa + muros)",
+            "valor": 8,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Volumen hormigón estribos (ambos lados)",
+            "valor": 21.86,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Alto total estribo (fondo quebrada + 1,5 m)",
+            "valor": 5.5,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho total estribo",
+            "valor": 3.8,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho excavación estribo",
+            "valor": 4.8,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Largo excavación estribo",
+            "valor": 1.5,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Espesor muros (fijo Excel)",
+            "valor": 0.2,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Cuantía acero canoa/estribos",
+            "valor": 100,
+            "unidad": "kg/m³"
+        },
+        {
+            "nombre": "Excedente escarpe (esponjado)",
+            "valor": 11.088,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Excedente excavación (esponjado)",
+            "valor": 65.902,
+            "unidad": "m³"
+        }
+    ],
+    "notas": [
+        "Tipología 6 — Construcción de Canoa en Cruce de Cauce Natural. Reemplazo de canoa existente por obra nueva de hormigón armado apoyada en estribos a ambos lados de la quebrada. Caudal de porteo de referencia: 1.8 m³/s (informativo; no dimensiona la sección en este motor).",
+        "Hormigón G25 = canoa (losa + 2 muros, 8 m³) + estribos (21.86 m³). Enfierradura 100 kg/m³ (Excel C21; distinto de CUANTIA_ACERO=80). Moldaje y antisol según fórmula Excel C22/C24.",
+        "Geometría fija del Excel: espesor muros 0,2 m, ancho adicional estribo 0,4 m, largo estribo 0,5 m, sobreexcavación 0,5 m/lado. Alto estribo = alto_fondo_quebrada + 1,5 m (5.5 m).",
+        "Movimiento de tierras solo de estribos (Excel C33–C35). Excedentes vía excedentes() (incluye escarpe esponjado al 10%); el Excel tipología 6 usa excav·1,2 − relleno/0,9 sin sumar el escarpe al botadero.",
+        "Demolición de la canoa existente en ladrillo se menciona en el diagnóstico del Excel pero no aparece en el presupuesto de ejemplo — no se incluye aquí (MT036 disponible en precios.csv si se agrega manualmente).",
+        "La verificación hidráulica del Excel (hoja 2.1) no se porta: se asume que el usuario entrega ancho/alto de canoa ya verificados."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 25698639,
+            "uf": 645.02
+        },
+        "gastos_generales": {
+            "clp": 2055891,
+            "uf": 51.6
+        },
+        "utilidades": {
+            "clp": 3854796,
+            "uf": 96.75
+        },
+        "imprevistos": {
+            "clp": 256986,
+            "uf": 6.45
+        },
+        "neto": {
+            "clp": 31866313,
+            "uf": 799.82
+        },
+        "iva": {
+            "clp": 6054599,
+            "uf": 151.97
+        },
+        "total": {
+            "clp": 37920912,
+            "uf": 951.79
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}

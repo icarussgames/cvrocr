@@ -2,7 +2,7 @@
 /**
  * Prueba del piloto v0.6: tipologías vivas
  * (revestimiento_canal, bocatoma, compuerta, sifon_cruce,
- * cajon_desarenador_reja, desarenador_reja). Comparar a mano contra
+ * cajon_desarenador_reja, desarenador_reja, canoa). Comparar a mano contra
  * los esperado_*.json.
  *
  * Uso (por SSH o terminal si tu hosting lo permite):
@@ -74,6 +74,14 @@ $desarenador_reja = valorizar('desarenador_reja', [
     'alto_caida_entrada' => 3.0,
 ]);
 
+$canoa = valorizar('canoa', [
+    'caudal' => 1.8,
+    'longitud_canoa' => 8.0,
+    'ancho_canoa' => 2.6,
+    'alto_canoa' => 1.0,
+    'alto_fondo_quebrada' => 4.0,
+]);
+
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode([
     'revestimiento_canal' => $revestimiento,
@@ -82,5 +90,6 @@ echo json_encode([
     'sifon_cruce' => $sifon_cruce,
     'cajon_desarenador_reja' => $cajon_desarenador_reja,
     'desarenador_reja' => $desarenador_reja,
+    'canoa' => $canoa,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 echo "\n";
