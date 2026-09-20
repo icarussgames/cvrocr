@@ -1,0 +1,289 @@
+{
+    "tipologia": "Mejoramiento con Abovedamiento en Zonas de Derrumbes y Otras Singularidades",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT027",
+            "descripcion": "Escarpe y destronque de la faja",
+            "unidad": "m3",
+            "cantidad": 105,
+            "precio_clp": 1197,
+            "subtotal_clp": 125685,
+            "subtotal_uf": 3.15
+        },
+        {
+            "codigo": "MT021",
+            "descripcion": "Excavacion con maquina",
+            "unidad": "m3",
+            "cantidad": 126,
+            "precio_clp": 4344,
+            "subtotal_clp": 547344,
+            "subtotal_uf": 13.74
+        },
+        {
+            "codigo": "MT024",
+            "descripcion": "Relleno material granular compactado",
+            "unidad": "m3",
+            "cantidad": 108.8,
+            "precio_clp": 32008,
+            "subtotal_clp": 3482470,
+            "subtotal_uf": 87.41
+        },
+        {
+            "codigo": "MT033",
+            "descripcion": "Manejo y transporte a botadero",
+            "unidad": "m3",
+            "cantidad": 134.42,
+            "precio_clp": 3600,
+            "subtotal_clp": 483912,
+            "subtotal_uf": 12.15
+        },
+        {
+            "codigo": "MT041",
+            "descripcion": "Cajon prefabricado de hormigon",
+            "unidad": "ml",
+            "cantidad": 100,
+            "precio_clp": 350000,
+            "subtotal_clp": 35000000,
+            "subtotal_uf": 878.48
+        },
+        {
+            "codigo": "MT026",
+            "descripcion": "Base granular",
+            "unidad": "m3",
+            "cantidad": 10,
+            "precio_clp": 25000,
+            "subtotal_clp": 250000,
+            "subtotal_uf": 6.27
+        },
+        {
+            "codigo": "MT040",
+            "descripcion": "Aplicacion de Antisol (curado quimico)",
+            "unidad": "m2",
+            "cantidad": 300,
+            "precio_clp": 358,
+            "subtotal_clp": 107400,
+            "subtotal_uf": 2.7
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Tramo abovedado",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Movimiento de tierras",
+                    "partidas": [
+                        {
+                            "codigo": "MT027",
+                            "descripcion": "Escarpe y destronque de la faja",
+                            "unidad": "m3",
+                            "cantidad": 105,
+                            "precio_clp": 1197,
+                            "subtotal_clp": 125685,
+                            "subtotal_uf": 3.15,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT021",
+                            "descripcion": "Excavacion con maquina",
+                            "unidad": "m3",
+                            "cantidad": 126,
+                            "precio_clp": 4344,
+                            "subtotal_clp": 547344,
+                            "subtotal_uf": 13.74,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT024",
+                            "descripcion": "Relleno material granular compactado",
+                            "unidad": "m3",
+                            "cantidad": 108.8,
+                            "precio_clp": 32008,
+                            "subtotal_clp": 3482470,
+                            "subtotal_uf": 87.41,
+                            "item": "2.1.3"
+                        },
+                        {
+                            "codigo": "MT033",
+                            "descripcion": "Manejo y transporte a botadero",
+                            "unidad": "m3",
+                            "cantidad": 134.42,
+                            "precio_clp": 3600,
+                            "subtotal_clp": 483912,
+                            "subtotal_uf": 12.15,
+                            "item": "2.1.4"
+                        }
+                    ],
+                    "subtotal_clp": 4639411,
+                    "subtotal_uf": 116.45
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Cajón prefabricado",
+                    "partidas": [
+                        {
+                            "codigo": "MT041",
+                            "descripcion": "Cajon prefabricado de hormigon",
+                            "unidad": "ml",
+                            "cantidad": 100,
+                            "precio_clp": 350000,
+                            "subtotal_clp": 35000000,
+                            "subtotal_uf": 878.48,
+                            "item": "2.2.1"
+                        },
+                        {
+                            "codigo": "MT026",
+                            "descripcion": "Base granular",
+                            "unidad": "m3",
+                            "cantidad": 10,
+                            "precio_clp": 25000,
+                            "subtotal_clp": 250000,
+                            "subtotal_uf": 6.27,
+                            "item": "2.2.2"
+                        }
+                    ],
+                    "subtotal_clp": 35250000,
+                    "subtotal_uf": 884.75
+                }
+            ],
+            "subtotal_clp": 39889411,
+            "subtotal_uf": 1001.2
+        },
+        {
+            "numero": "3",
+            "titulo": "Obras adicionales",
+            "partidas": [
+                {
+                    "codigo": "MT040",
+                    "descripcion": "Aplicacion de Antisol (curado quimico)",
+                    "unidad": "m2",
+                    "cantidad": 300,
+                    "precio_clp": 358,
+                    "subtotal_clp": 107400,
+                    "subtotal_uf": 2.7,
+                    "item": "3.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 107400,
+            "subtotal_uf": 2.7
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Roce de la faja del canal",
+            "valor": 700,
+            "unidad": "m²"
+        },
+        {
+            "nombre": "Ancho faja escarpe (3 + B + 3)",
+            "valor": 7,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho total excavación (0,4 + B + 0,4)",
+            "valor": 1.8,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Alto muros cajón (H + 2·e)",
+            "valor": 1.26,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Altura máxima a rellenar (+0,1 m)",
+            "valor": 1.36,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Excedente escarpe (×1,1)",
+            "valor": 115.5,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Excedente mov. de tierras (×1,1)",
+            "valor": 18.92,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Talud (informativo; cajón rectangular)",
+            "valor": 0,
+            "unidad": "-"
+        }
+    ],
+    "notas": [
+        "Tipología 12 — Mejoramiento con Abovedamiento en Zonas de Derrumbes y Otras Singularidades. Reemplazo del tramo (L = 100 m) por cajón prefabricado rectangular H×B = 1×1 m, espesor 0.13 m. Caudal de porteo de referencia: 0.5 m³\/s (informativo; no dimensiona la sección).",
+        "No es tipología 11 (revestimiento_canal: hormigón in situ) ni tipología 7 (abovedamiento_reja_canoa: losa + reja sobre canoa).",
+        "Movimiento de tierras Excel 3.2: escarpe = (3+B+3)·L·0,15; excavación = (0,4+B+0,4)·L·0,7; relleno = L·(H+2e+0,1)·2·0,4. Excedentes = escarpe·1,1 + max(0, excav−relleno)·1,1 (fórmula Excel C29–C32; no usa compactación 0,9 de excedentes()).",
+        "Cajón prefabricado valorizado como MT041 por ml (sección de referencia del Excel). Base granular = L·0,1·B (MT026). Antisol = 2·L·H + L·B (MT040). El Excel no cobra hormigón\/enfierradura\/moldaje in situ — el cajón llega prefabricado.",
+        "Precios desde precios.csv (MT*). El PU de relleno del Excel (≈9603) difiere de MT024; se usa el vector del CSV. Talud del Excel no entra a las fórmulas del cajón rectangular."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 41996111,
+            "uf": 1054.07
+        },
+        "gastos_generales": {
+            "clp": 3359689,
+            "uf": 84.33
+        },
+        "utilidades": {
+            "clp": 6299417,
+            "uf": 158.11
+        },
+        "imprevistos": {
+            "clp": 419961,
+            "uf": 10.54
+        },
+        "neto": {
+            "clp": 52075178,
+            "uf": 1307.05
+        },
+        "iva": {
+            "clp": 9894284,
+            "uf": 248.34
+        },
+        "total": {
+            "clp": 61969462,
+            "uf": 1555.39
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}
