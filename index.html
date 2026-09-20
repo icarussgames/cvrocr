@@ -493,6 +493,15 @@
         box-shadow: none;
         font-weight: 600;
     }
+    .splash-tile.vacio {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+        cursor: default;
+        pointer-events: none;
+        min-height: 4.4rem;
+        height: 4.8rem;
+    }
     .splash-tile .num {
         display: block;
         font-size: 0.65rem;
@@ -577,22 +586,24 @@
 
     <section v-if="mostrandoSplash" class="splash" aria-label="Selección de tipología">
         <h2>Seleccione la tipología de obra</h2>
-        <p class="splash-sub">15 casillas · 10 disponibles ahora · 5 pendientes</p>
+        <p class="splash-sub">13 tipologías · las casillas en gris aún no tienen motor cargado</p>
         <div class="splash-grid">
-            <button
-                v-for="(slot, idx) in slotsSplash"
-                :key="slot.id + '-' + idx"
-                type="button"
-                class="splash-tile"
-                :class="{ pendiente: !slot.disponible }"
-                :disabled="!slot.disponible"
-                @click="elegirTipologiaDesdeSplash(slot)"
-            >
-                <span>
-                    <span class="num">{{ idx + 1 }}</span>
-                    {{ slot.titulo }}
-                </span>
-            </button>
+            <template v-for="(slot, idx) in slotsSplash" :key="slot.key">
+                <div v-if="slot.vacio" class="splash-tile vacio" aria-hidden="true"></div>
+                <button
+                    v-else
+                    type="button"
+                    class="splash-tile"
+                    :class="{ pendiente: !slot.disponible }"
+                    :disabled="!slot.disponible"
+                    @click="elegirTipologiaDesdeSplash(slot)"
+                >
+                    <span>
+                        <span class="num">{{ slot.numero }}</span>
+                        {{ slot.titulo }}
+                    </span>
+                </button>
+            </template>
         </div>
     </section>
 
@@ -1131,22 +1142,41 @@ createApp({
             return this.tipologias.find(t => t.id === this.tipologiaId) || null;
         },
         slotsSplash() {
-            const known = this.tipologias.map((t) => ({
-                id: t.id,
-                titulo: t.titulo,
-                disponible: true,
-            }));
-            const slots = known.slice();
-            let n = 1;
-            while (slots.length < 15) {
-                slots.push({
-                    id: "pendiente_" + n,
-                    titulo: "Próximamente",
-                    disponible: false,
-                });
-                n += 1;
-            }
-            return slots.slice(0, 15);
+            // Official CNR list (13): item 11 splits into revestimiento / abovedamiento / entubamiento.
+            // Last two cells of the 5x3 grid stay empty. engineId links to an existing PHP tipología when known.
+            const catalogo = [
+                { numero: "1", titulo: "Construcción de Bocatoma", engineId: null },
+                { numero: "2", titulo: "Reposición de Compuertas", engineId: "compuerta" },
+                { numero: "3", titulo: "Construcción de Sifón en Cruce de Camino o FFCC o Cauce Natural", engineId: null },
+                { numero: "4", titulo: "Construcción de Cajón, Desarenador y Reja en Cruce de Camino o FFCC", engineId: null },
+                { numero: "5", titulo: "Mejoramiento con Desarenador y Reja en Cruce de Camino o FFCC", engineId: null },
+                { numero: "6", titulo: "Construcción de Canoa en Cruce de Cauce Natural", engineId: "canoa" },
+                { numero: "7", titulo: "Mejoramiento con Abovedamiento y Reja en Canoas", engineId: null },
+                { numero: "8", titulo: "Construcción de Desarenador", engineId: null },
+                { numero: "9", titulo: "Reposición de Marco Partidor", engineId: "partidor" },
+                { numero: "10", titulo: "Mejoramiento con Portales y Revestimiento en Túnel", engineId: "tunel_shotcrete" },
+                { numero: "11a", titulo: "Mejoramiento con Revestimiento en Zonas de Derrumbes y Otras Singularidades", engineId: "revestimiento_canal" },
+                { numero: "11b", titulo: "Mejoramiento con Abovedamiento en Zonas de Derrumbes y Otras Singularidades", engineId: null },
+                { numero: "11c", titulo: "Mejoramiento con Entubamiento en Zonas de Derrumbes y Otras Singularidades", engineId: null },
+                { vacio: true },
+                { vacio: true },
+            ];
+            return catalogo.map((slot, idx) => {
+                if (slot.vacio) {
+                    return { key: "vacio-" + idx, vacio: true, disponible: false };
+                }
+                const engine = slot.engineId
+                    ? this.tipologias.find((t) => t.id === slot.engineId)
+                    : null;
+                return {
+                    key: "slot-" + slot.numero,
+                    numero: slot.numero,
+                    titulo: slot.titulo,
+                    id: engine ? engine.id : ("pendiente_" + slot.numero),
+                    disponible: Boolean(engine),
+                    vacio: false,
+                };
+            });
         },
     },
     mounted() {

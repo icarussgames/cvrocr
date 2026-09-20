@@ -44,7 +44,7 @@ function _canoa($p) {
 }
 
 $TIPOLOGIAS['canoa'] = [
-    'titulo' => 'Restauracion canoa',
+    'titulo' => 'Construcción de Canoa en Cruce de Cauce Natural',
     'campos' => [
         _campo('largo', 'Largo de la canoa', 'm', 24.0,
             'Longitud total de la canoa a restaurar.'),

@@ -29,7 +29,7 @@ function _tunel_shotcrete($p) {
 }
 
 $TIPOLOGIAS['tunel_shotcrete'] = [
-    'titulo' => 'Mejoramiento tramo tunel (shotcrete)',
+    'titulo' => 'Mejoramiento con Portales y Revestimiento en Túnel',
     'campos' => [
         _campo('largo', 'Largo del tramo', 'm', 50.0,
             'Longitud del tramo de tunel a reforzar con shotcrete.'),

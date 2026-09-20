@@ -140,7 +140,7 @@ function _revestimiento_canal($p) {
 }
 
 $TIPOLOGIAS['revestimiento_canal'] = [
-    'titulo' => 'Revestimiento del canal en hormigón armado',
+    'titulo' => 'Mejoramiento con Revestimiento en Zonas de Derrumbes y Otras Singularidades',
     'esquema' => 'esquema_revest.png',
     'campos' => [
         _campo('caudal', 'Caudal de diseno', 'L/s', 670,

@@ -68,7 +68,7 @@ function _partidor($p) {
 }
 
 $TIPOLOGIAS['partidor'] = [
-    'titulo' => 'Reposicion marco partidor',
+    'titulo' => 'Reposición de Marco Partidor',
     'campos' => [
         _campo('caudal', 'Caudal de diseno', 'm3/s', 0.67,
             'Caudal de diseno que debe repartir el marco partidor.'),

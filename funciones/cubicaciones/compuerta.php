@@ -57,7 +57,7 @@ function _compuerta($p) {
 }
 
 $TIPOLOGIAS['compuerta'] = [
-    'titulo' => 'Reposicion de compuerta',
+    'titulo' => 'Reposición de Compuertas',
     'campos' => [
         _campo('base', 'Ancho del canal en la compuerta', 'm', 1.0,
             'Ancho interior del canal en el punto donde va la compuerta.'),
