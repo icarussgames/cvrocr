@@ -18,10 +18,8 @@
 $TIPOLOGIAS = [];
 
 require __DIR__ . '/funciones/constantes.php';
-require __DIR__ . '/funciones/hidraulica.php';
 require __DIR__ . '/funciones/parametros.php';
 require __DIR__ . '/funciones/comun.php';
-require __DIR__ . '/funciones/tablas.php';
 
 // valorizacion.php define _campo(), que cada archivo de cubicaciones
 // usa al registrarse - por eso se carga antes que ellas.
