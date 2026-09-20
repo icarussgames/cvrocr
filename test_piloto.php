@@ -72,6 +72,16 @@ $reparacion_sifon = valorizar('reparacion_sifon', [
     'espesor' => 0.2,
 ]);
 
+$sifon_cruce = valorizar('sifon_cruce', [
+    'caudal' => 0.5,
+    'longitud_sifon' => 25.0,
+    'longitud_bajo_cauce' => 15.0,
+    'diametro_tuberia' => 0.8,
+    'alto_existente' => 0.8,
+    'ancho_existente' => 0.8,
+    'alto_caida' => 1.0,
+]);
+
 $reja_sifon = valorizar('reja_sifon', [
     'base' => 1.0,
     'altura' => 1.0,
@@ -93,6 +103,7 @@ echo json_encode([
     'cajon' => $cajon,
     'canoa' => $canoa,
     'reparacion_sifon' => $reparacion_sifon,
+    'sifon_cruce' => $sifon_cruce,
     'reja_sifon' => $reja_sifon,
     'tunel_shotcrete' => $tunel_shotcrete,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
