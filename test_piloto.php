@@ -41,8 +41,16 @@ $partidor = valorizar('partidor', [
 ]);
 
 $compuerta = valorizar('compuerta', [
-    'base' => 1.0,
-    'altura' => 1.0,
+    'caudal' => 0.5,
+    'longitud_descarga' => 400.0,
+    'ancho_descarga' => 1.0,
+    'alto_descarga' => 0.8,
+    'espesor_revestimiento' => 0.13,
+    'n_compuertas' => 2,
+    'ancho_compuerta' => 0.6,
+    'alto_compuerta' => 0.8,
+    'espesor_compuerta' => 0.008,
+    'alto_portico' => 1.0,
 ]);
 
 $cajon = valorizar('cajon', [
