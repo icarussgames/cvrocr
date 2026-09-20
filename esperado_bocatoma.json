@@ -1,0 +1,321 @@
+{
+    "tipologia": "Construcción de Bocatoma",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT027",
+            "descripcion": "Escarpe y destronque de la faja",
+            "unidad": "m3",
+            "cantidad": 8.4,
+            "precio_clp": 1197,
+            "subtotal_clp": 10055,
+            "subtotal_uf": 0.25
+        },
+        {
+            "codigo": "MT021",
+            "descripcion": "Excavacion con maquina",
+            "unidad": "m3",
+            "cantidad": 25.2,
+            "precio_clp": 4344,
+            "subtotal_clp": 109469,
+            "subtotal_uf": 2.75
+        },
+        {
+            "codigo": "MT024",
+            "descripcion": "Relleno material granular compactado",
+            "unidad": "m3",
+            "cantidad": 28,
+            "precio_clp": 32008,
+            "subtotal_clp": 896224,
+            "subtotal_uf": 22.49
+        },
+        {
+            "codigo": "MT033",
+            "descripcion": "Manejo y transporte a botadero",
+            "unidad": "m3",
+            "cantidad": 9.24,
+            "precio_clp": 3600,
+            "subtotal_clp": 33264,
+            "subtotal_uf": 0.83
+        },
+        {
+            "codigo": "MT003",
+            "descripcion": "Hormigon estructural G25",
+            "unidad": "m3",
+            "cantidad": 14.55,
+            "precio_clp": 189220,
+            "subtotal_clp": 2753151,
+            "subtotal_uf": 69.1
+        },
+        {
+            "codigo": "MT011",
+            "descripcion": "Enfierradura (acero de refuerzo)",
+            "unidad": "kg",
+            "cantidad": 1164,
+            "precio_clp": 3959,
+            "subtotal_clp": 4608276,
+            "subtotal_uf": 115.66
+        },
+        {
+            "codigo": "MT018",
+            "descripcion": "Moldaje",
+            "unidad": "m2",
+            "cantidad": 174.6,
+            "precio_clp": 19616,
+            "subtotal_clp": 3424954,
+            "subtotal_uf": 85.96
+        },
+        {
+            "codigo": "MT042",
+            "descripcion": "Compuerta metalica con mecanismo de izaje",
+            "unidad": "un",
+            "cantidad": 3,
+            "precio_clp": 2500000,
+            "subtotal_clp": 7500000,
+            "subtotal_uf": 188.24
+        },
+        {
+            "codigo": "MT040",
+            "descripcion": "Aplicacion de Antisol (curado quimico)",
+            "unidad": "m2",
+            "cantidad": 174.6,
+            "precio_clp": 358,
+            "subtotal_clp": 62507,
+            "subtotal_uf": 1.57
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Bocatoma proyectada",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Movimiento de tierras",
+                    "partidas": [
+                        {
+                            "codigo": "MT027",
+                            "descripcion": "Escarpe y destronque de la faja",
+                            "unidad": "m3",
+                            "cantidad": 8.4,
+                            "precio_clp": 1197,
+                            "subtotal_clp": 10055,
+                            "subtotal_uf": 0.25,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT021",
+                            "descripcion": "Excavacion con maquina",
+                            "unidad": "m3",
+                            "cantidad": 25.2,
+                            "precio_clp": 4344,
+                            "subtotal_clp": 109469,
+                            "subtotal_uf": 2.75,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT024",
+                            "descripcion": "Relleno material granular compactado",
+                            "unidad": "m3",
+                            "cantidad": 28,
+                            "precio_clp": 32008,
+                            "subtotal_clp": 896224,
+                            "subtotal_uf": 22.49,
+                            "item": "2.1.3"
+                        },
+                        {
+                            "codigo": "MT033",
+                            "descripcion": "Manejo y transporte a botadero",
+                            "unidad": "m3",
+                            "cantidad": 9.24,
+                            "precio_clp": 3600,
+                            "subtotal_clp": 33264,
+                            "subtotal_uf": 0.83,
+                            "item": "2.1.4"
+                        }
+                    ],
+                    "subtotal_clp": 1049012,
+                    "subtotal_uf": 26.32
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Hormigones",
+                    "partidas": [
+                        {
+                            "codigo": "MT003",
+                            "descripcion": "Hormigon estructural G25",
+                            "unidad": "m3",
+                            "cantidad": 14.55,
+                            "precio_clp": 189220,
+                            "subtotal_clp": 2753151,
+                            "subtotal_uf": 69.1,
+                            "item": "2.2.1"
+                        },
+                        {
+                            "codigo": "MT011",
+                            "descripcion": "Enfierradura (acero de refuerzo)",
+                            "unidad": "kg",
+                            "cantidad": 1164,
+                            "precio_clp": 3959,
+                            "subtotal_clp": 4608276,
+                            "subtotal_uf": 115.66,
+                            "item": "2.2.2"
+                        },
+                        {
+                            "codigo": "MT018",
+                            "descripcion": "Moldaje",
+                            "unidad": "m2",
+                            "cantidad": 174.6,
+                            "precio_clp": 19616,
+                            "subtotal_clp": 3424954,
+                            "subtotal_uf": 85.96,
+                            "item": "2.2.3"
+                        }
+                    ],
+                    "subtotal_clp": 10786381,
+                    "subtotal_uf": 270.72
+                },
+                {
+                    "numero": "2.3",
+                    "titulo": "Compuertas",
+                    "partidas": [
+                        {
+                            "codigo": "MT042",
+                            "descripcion": "Compuerta metalica con mecanismo de izaje",
+                            "unidad": "un",
+                            "cantidad": 3,
+                            "precio_clp": 2500000,
+                            "subtotal_clp": 7500000,
+                            "subtotal_uf": 188.24,
+                            "item": "2.3.1"
+                        }
+                    ],
+                    "subtotal_clp": 7500000,
+                    "subtotal_uf": 188.24
+                }
+            ],
+            "subtotal_clp": 19335393,
+            "subtotal_uf": 485.28
+        },
+        {
+            "numero": "3",
+            "titulo": "Obras adicionales",
+            "partidas": [
+                {
+                    "codigo": "MT040",
+                    "descripcion": "Aplicacion de Antisol (curado quimico)",
+                    "unidad": "m2",
+                    "cantidad": 174.6,
+                    "precio_clp": 358,
+                    "subtotal_clp": 62507,
+                    "subtotal_uf": 1.57,
+                    "item": "3.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 62507,
+            "subtotal_uf": 1.57
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Volumen hormigón apoyos (machones)",
+            "valor": 8,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Volumen hormigón obra de entrada",
+            "valor": 5.25,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Volumen hormigón muros de anclaje",
+            "valor": 1.3,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Cantidad de machones de apoyo",
+            "valor": 4,
+            "unidad": "un"
+        },
+        {
+            "nombre": "Ancho de cada muro de anclaje",
+            "valor": 1.3,
+            "unidad": "m"
+        }
+    ],
+    "notas": [
+        "Tipología 1 — Construcción de Bocatoma permanente. Caudal de porteo de referencia: 0.03 m³\/s (informativo; no entra al dimensionamiento de este motor).",
+        "Hormigón G25 = apoyos de compuerta (4 machones) + losa de fondo y zapatas aguas arriba\/abajo + muros de anclaje laterales. Enfierradura = 80 kg\/m³; moldaje = 12 m²\/m³ (criterio del Excel de ejemplo).",
+        "Movimiento de tierras según Excel: escarpe e = 0,15 m; sobre-excavación lateral = 1,0 m; profundidad media de excavación = 0,9 m; altura de relleno = 2,0 m. Excedentes con esponjamiento = 0.1 vía excedentes().",
+        "Partida no mapeada (sin código MT en precios.csv): «Automatización y telemetría de compuertas» (gl, 1 und. en el Excel, ~16,2 M$). Incluir manualmente si aplica.",
+        "El Excel de parámetros declara ancho de machón = 0,6 m, pero la hoja de obras usa 0,5 m; el default de este motor es 0,5 m para reproducir el presupuesto de ejemplo.",
+        "No se modelaron emplantillado ni base granular (el Excel de tipología 1 no los incluye)."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 21397199,
+            "uf": 537.06
+        },
+        "gastos_generales": {
+            "clp": 1711776,
+            "uf": 42.96
+        },
+        "utilidades": {
+            "clp": 3209580,
+            "uf": 80.56
+        },
+        "imprevistos": {
+            "clp": 213972,
+            "uf": 5.37
+        },
+        "neto": {
+            "clp": 26532527,
+            "uf": 665.95
+        },
+        "iva": {
+            "clp": 5041180,
+            "uf": 126.53
+        },
+        "total": {
+            "clp": 31573707,
+            "uf": 792.48
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}
