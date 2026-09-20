@@ -1,0 +1,55 @@
+# ============================================================
+# .htaccess - piloto_php
+# Sube este archivo a la RAÍZ de la carpeta donde está index.html
+# (ej. public_html/piloto/.htaccess)
+# ============================================================
+
+# 1) Desactivar el listado de directorios (esto resuelve tu pregunta
+#    original: nadie puede ver el contenido de /images/ ni de ninguna
+#    otra carpeta sin index).
+Options -Indexes
+
+# 2) Página por defecto al entrar a la carpeta
+DirectoryIndex index.html
+
+# 3) Bloquear el acceso directo por navegador a archivos que no deben
+#    ser públicos: la lógica de cálculo (no es una ruta, es una
+#    librería que los api-*.php usan por dentro), el CSV de precios
+#    completo, y los archivos de referencia/documentación del piloto.
+<FilesMatch "^(funciones\.php|test_piloto\.php|precios\.csv|README\.md|esperado_python\.json)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 4) Bloquear cualquier archivo oculto (empieza con punto): .htaccess,
+#    .git, .env, etc. - por si en el futuro se sube algo así por error.
+<FilesMatch "^\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 5) Cabeceras de seguridad básicas
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 6) No mostrar mensajes de error detallados de PHP al público
+#    (evita filtrar rutas del servidor si algo falla). Protegido con
+#    IfModule: en hosting con PHP como FastCGI/PHP-FPM (común en
+#    cPanel/Webuzo) "php_flag" sin esta protección tira error 500 y
+#    bloquea TODO el sitio, incluido index.html.
+<IfModule mod_php.c>
+    php_flag display_errors off
+</IfModule>
