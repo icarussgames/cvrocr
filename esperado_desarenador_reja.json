@@ -1,0 +1,370 @@
+{
+    "tipologia": "Mejoramiento con Desarenador y Reja en Cruce de Camino o FFCC",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT027",
+            "descripcion": "Escarpe y destronque de la faja",
+            "unidad": "m3",
+            "cantidad": 11.25,
+            "precio_clp": 1197,
+            "subtotal_clp": 13466,
+            "subtotal_uf": 0.34
+        },
+        {
+            "codigo": "MT021",
+            "descripcion": "Excavacion con maquina",
+            "unidad": "m3",
+            "cantidad": 91.8,
+            "precio_clp": 4344,
+            "subtotal_clp": 398779,
+            "subtotal_uf": 10.01
+        },
+        {
+            "codigo": "MT024",
+            "descripcion": "Relleno material granular compactado",
+            "unidad": "m3",
+            "cantidad": 15.3,
+            "precio_clp": 32008,
+            "subtotal_clp": 489722,
+            "subtotal_uf": 12.29
+        },
+        {
+            "codigo": "MT033",
+            "descripcion": "Manejo y transporte a botadero",
+            "unidad": "m3",
+            "cantidad": 96.36,
+            "precio_clp": 3600,
+            "subtotal_clp": 346878,
+            "subtotal_uf": 8.71
+        },
+        {
+            "codigo": "MT001",
+            "descripcion": "Emplantillado hormigon G05",
+            "unidad": "m3",
+            "cantidad": 4.86,
+            "precio_clp": 181136,
+            "subtotal_clp": 880321,
+            "subtotal_uf": 22.1
+        },
+        {
+            "codigo": "MT003",
+            "descripcion": "Hormigon estructural G25",
+            "unidad": "m3",
+            "cantidad": 10.32,
+            "precio_clp": 189220,
+            "subtotal_clp": 1952750,
+            "subtotal_uf": 49.01
+        },
+        {
+            "codigo": "MT011",
+            "descripcion": "Enfierradura (acero de refuerzo)",
+            "unidad": "kg",
+            "cantidad": 825.6,
+            "precio_clp": 3959,
+            "subtotal_clp": 3268550,
+            "subtotal_uf": 82.04
+        },
+        {
+            "codigo": "MT018",
+            "descripcion": "Moldaje",
+            "unidad": "m2",
+            "cantidad": 61.2,
+            "precio_clp": 19616,
+            "subtotal_clp": 1200499,
+            "subtotal_uf": 30.13
+        },
+        {
+            "codigo": "MT039",
+            "descripcion": "Reja metalica (pletinas y refuerzos)",
+            "unidad": "kg",
+            "cantidad": 180.2,
+            "precio_clp": 4500,
+            "subtotal_clp": 810881,
+            "subtotal_uf": 20.35
+        },
+        {
+            "codigo": "MT040",
+            "descripcion": "Aplicacion de Antisol (curado quimico)",
+            "unidad": "m2",
+            "cantidad": 32.4,
+            "precio_clp": 358,
+            "subtotal_clp": 11599,
+            "subtotal_uf": 0.29
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Trampa de arena y reja",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Movimiento de tierras",
+                    "partidas": [
+                        {
+                            "codigo": "MT027",
+                            "descripcion": "Escarpe y destronque de la faja",
+                            "unidad": "m3",
+                            "cantidad": 11.25,
+                            "precio_clp": 1197,
+                            "subtotal_clp": 13466,
+                            "subtotal_uf": 0.34,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT021",
+                            "descripcion": "Excavacion con maquina",
+                            "unidad": "m3",
+                            "cantidad": 91.8,
+                            "precio_clp": 4344,
+                            "subtotal_clp": 398779,
+                            "subtotal_uf": 10.01,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT024",
+                            "descripcion": "Relleno material granular compactado",
+                            "unidad": "m3",
+                            "cantidad": 15.3,
+                            "precio_clp": 32008,
+                            "subtotal_clp": 489722,
+                            "subtotal_uf": 12.29,
+                            "item": "2.1.3"
+                        },
+                        {
+                            "codigo": "MT033",
+                            "descripcion": "Manejo y transporte a botadero",
+                            "unidad": "m3",
+                            "cantidad": 96.36,
+                            "precio_clp": 3600,
+                            "subtotal_clp": 346878,
+                            "subtotal_uf": 8.71,
+                            "item": "2.1.4"
+                        }
+                    ],
+                    "subtotal_clp": 1248845,
+                    "subtotal_uf": 31.35
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Hormigones",
+                    "partidas": [
+                        {
+                            "codigo": "MT001",
+                            "descripcion": "Emplantillado hormigon G05",
+                            "unidad": "m3",
+                            "cantidad": 4.86,
+                            "precio_clp": 181136,
+                            "subtotal_clp": 880321,
+                            "subtotal_uf": 22.1,
+                            "item": "2.2.1"
+                        },
+                        {
+                            "codigo": "MT003",
+                            "descripcion": "Hormigon estructural G25",
+                            "unidad": "m3",
+                            "cantidad": 10.32,
+                            "precio_clp": 189220,
+                            "subtotal_clp": 1952750,
+                            "subtotal_uf": 49.01,
+                            "item": "2.2.2"
+                        },
+                        {
+                            "codigo": "MT011",
+                            "descripcion": "Enfierradura (acero de refuerzo)",
+                            "unidad": "kg",
+                            "cantidad": 825.6,
+                            "precio_clp": 3959,
+                            "subtotal_clp": 3268550,
+                            "subtotal_uf": 82.04,
+                            "item": "2.2.3"
+                        },
+                        {
+                            "codigo": "MT018",
+                            "descripcion": "Moldaje",
+                            "unidad": "m2",
+                            "cantidad": 61.2,
+                            "precio_clp": 19616,
+                            "subtotal_clp": 1200499,
+                            "subtotal_uf": 30.13,
+                            "item": "2.2.4"
+                        }
+                    ],
+                    "subtotal_clp": 7302120,
+                    "subtotal_uf": 183.28
+                },
+                {
+                    "numero": "2.3",
+                    "titulo": "Reja",
+                    "partidas": [
+                        {
+                            "codigo": "MT039",
+                            "descripcion": "Reja metalica (pletinas y refuerzos)",
+                            "unidad": "kg",
+                            "cantidad": 180.2,
+                            "precio_clp": 4500,
+                            "subtotal_clp": 810881,
+                            "subtotal_uf": 20.35,
+                            "item": "2.3.1"
+                        }
+                    ],
+                    "subtotal_clp": 810881,
+                    "subtotal_uf": 20.35
+                }
+            ],
+            "subtotal_clp": 9361846,
+            "subtotal_uf": 234.98
+        },
+        {
+            "numero": "3",
+            "titulo": "Obras adicionales",
+            "partidas": [
+                {
+                    "codigo": "MT040",
+                    "descripcion": "Aplicacion de Antisol (curado quimico)",
+                    "unidad": "m2",
+                    "cantidad": 32.4,
+                    "precio_clp": 358,
+                    "subtotal_clp": 11599,
+                    "subtotal_uf": 0.29,
+                    "item": "3.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 11599,
+            "subtotal_uf": 0.29
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Ancho entrada (ancho existente + 0,5)",
+            "valor": 3,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Alto total entrada (alto existente + caída)",
+            "valor": 4,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho trampa de arena (2·ancho existente)",
+            "valor": 5,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Alto trampa de arena (alto existente + 0,6)",
+            "valor": 1.6,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Longitud trampa de arena (fija Excel)",
+            "valor": 5,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Alto reja proyectada (alto existente + 0,2)",
+            "valor": 1.2,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho reja proyectada (= ancho entrada)",
+            "valor": 3,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Pletinas verticales",
+            "valor": 31,
+            "unidad": "un"
+        },
+        {
+            "nombre": "Metros lineales de pletina (+10% despuntes)",
+            "valor": 47.52,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Peso pletinas (sin marco\/refuerzos)",
+            "valor": 90.098,
+            "unidad": "kg"
+        },
+        {
+            "nombre": "Longitud sifón existente (informativo)",
+            "valor": 250,
+            "unidad": "m"
+        }
+    ],
+    "notas": [
+        "Tipología 5 — Mejoramiento con Desarenador y Reja en Cruce de Camino o FFCC. Agrega trampa de arena y reja hidráulica a la entrada de un sifón existente (longitud 250 m). Caudal de porteo de referencia: 1.16 m³\/s (informativo; no dimensiona la sección en este motor).",
+        "No incluye cajón prefabricado (eso es tipología 4 \/ cajon_desarenador_reja). Aquí solo hay desarenador + reja.",
+        "La trampa de arena se cubicá con longitud fija de 5 m (Excel G3), ancho = 2·ancho_existente (5 m) y alto = alto_existente + 0,6 m (1.6 m). Hormigón G25 con factor 1,2; enfierradura 80 kg\/m³; antisol = solo caras superiores (criterio Excel D14).",
+        "Movimiento de tierras solo de la trampa. Excedentes vía excedentes() (incluye escarpe esponjado); el Excel tipología 5 usa excav·1,1 − relleno\/0,9 sin sumar el escarpe al botadero.",
+        "Reja: pletinas 80×3 mm cada 0,1 m + 2 horizontales, +10% despuntes, peso total ×2 (marco\/refuerzos). Valorizada como MT039. El Excel tip.5 usa largo de verticales = ancho reja (F5); este motor usa alto reja (criterio físico, igual tip.4). Accesorios (20% del costo reja) y anclaje (40%) del Excel no tienen código MT en precios.csv — incluir manualmente si aplica.",
+        "Alto de caída de entrada (3 m) define el alto total de entrada informativo; no entra a las fórmulas de cubicación de trampa\/reja."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 11372747,
+            "uf": 285.45
+        },
+        "gastos_generales": {
+            "clp": 909820,
+            "uf": 22.84
+        },
+        "utilidades": {
+            "clp": 1705912,
+            "uf": 42.82
+        },
+        "imprevistos": {
+            "clp": 113727,
+            "uf": 2.85
+        },
+        "neto": {
+            "clp": 14102207,
+            "uf": 353.96
+        },
+        "iva": {
+            "clp": 2679419,
+            "uf": 67.25
+        },
+        "total": {
+            "clp": 16781626,
+            "uf": 421.21
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}
