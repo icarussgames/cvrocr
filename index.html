@@ -495,9 +495,19 @@
         opacity: 0.7;
         margin-bottom: 0.35rem;
     }
+    #panel-tipologia {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    #panel-tipologia .fila-tipologia {
+        flex: 1;
+        min-width: 16rem;
+    }
     .btn-cambiar-tipologia {
-        margin-left: 0.75rem;
-        padding: 0.35rem 0.75rem;
+        margin-bottom: 0.15rem;
+        padding: 0.45rem 0.85rem;
         border: 1px solid #0b4f6c;
         background: #fff;
         color: #0b4f6c;
@@ -507,20 +517,6 @@
         white-space: nowrap;
     }
     .btn-cambiar-tipologia:hover { background: #e8f3f8; }
-    .fila-tipologia-activa {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-    .fila-tipologia-activa .titulo-tipologia {
-        font-size: 1.15rem;
-        font-weight: 700;
-        color: #0b4f6c;
-        flex: 1;
-        min-width: 12rem;
-    }
     @media (max-width: 900px) {
         .splash-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
@@ -601,10 +597,14 @@
     <main v-if="pestanaActiva === 'datos'">
         <!-- Panel de ancho completo: selección de tipología -->
         <div class="panel" id="panel-tipologia">
-            <div class="fila-tipologia-activa">
-                <span class="titulo-tipologia">{{ tipologiaActual ? tipologiaActual.titulo : 'Tipología' }}</span>
-                <button type="button" class="btn-cambiar-tipologia" @click="volverAlSplash">Cambiar tipología</button>
-            </div>
+            <label class="fila-tipologia">
+                <span>Seleccionar tipología de obra</span>
+                <select v-model="tipologiaId" @change="alCambiarTipologia">
+                    <option disabled value="">Seleccione una tipología...</option>
+                    <option v-for="t in tipologias" :key="t.id" :value="t.id">{{ t.titulo }}</option>
+                </select>
+            </label>
+            <button type="button" class="btn-cambiar-tipologia" @click="volverAlSplash">Volver al inicio</button>
         </div>
 
         <div class="panel" id="panel-datos">
@@ -1181,6 +1181,15 @@ createApp({
                     this.parametros[campo.nombre] = campo.defecto;
                 }
             }
+        },
+        elegirTipologiaDesdeSplash(slot) {
+            if (!slot || !slot.disponible) return;
+            this.tipologiaId = slot.id;
+            this.alCambiarTipologia();
+            this.mostrandoSplash = false;
+        },
+        volverAlSplash() {
+            this.mostrandoSplash = true;
         },
         abrirModal(mensaje, textoBoton, accion) {
             this.modal = { visible: true, mensaje, textoBoton, accion };
