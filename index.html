@@ -454,18 +454,22 @@
     .splash-grid {
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 0.85rem;
+        grid-template-rows: repeat(3, auto);
+        gap: 0.7rem;
     }
     .splash-tile {
-        aspect-ratio: 1;
+        aspect-ratio: auto;
+        min-height: 4.4rem;
+        max-height: 5.2rem;
+        height: 4.8rem;
         border: 2px solid #0b4f6c;
-        border-radius: 12px;
+        border-radius: 10px;
         background: #fff;
         color: #0b4f6c;
         font-weight: 700;
-        font-size: 0.92rem;
-        line-height: 1.25;
-        padding: 0.75rem;
+        font-size: 0.78rem;
+        line-height: 1.2;
+        padding: 0.45rem 0.5rem;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -473,6 +477,7 @@
         text-align: center;
         box-shadow: 0 2px 8px rgba(11, 79, 108, 0.12);
         transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+        overflow: hidden;
     }
     .splash-tile:hover:not(:disabled) {
         transform: translateY(-2px);
@@ -490,38 +495,45 @@
     }
     .splash-tile .num {
         display: block;
-        font-size: 0.75rem;
+        font-size: 0.65rem;
         font-weight: 600;
         opacity: 0.7;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.2rem;
     }
-    #panel-tipologia {
-        display: flex;
-        align-items: flex-end;
-        gap: 0.75rem;
-        flex-wrap: wrap;
+    .header-titulo {
+        position: relative;
     }
-    #panel-tipologia .fila-tipologia {
-        flex: 1;
-        min-width: 16rem;
-    }
-    .btn-cambiar-tipologia {
-        margin-bottom: 0.15rem;
-        padding: 0.45rem 0.85rem;
-        border: 1px solid #0b4f6c;
-        background: #fff;
-        color: #0b4f6c;
-        border-radius: 6px;
+    .btn-home-invisible {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: min(100%, 28rem);
+        height: 100%;
+        min-height: 2.5rem;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background: transparent;
         cursor: pointer;
-        font-size: 0.85rem;
-        white-space: nowrap;
+        opacity: 0;
     }
-    .btn-cambiar-tipologia:hover { background: #e8f3f8; }
+    .btn-home-invisible:focus-visible {
+        outline: 2px solid rgba(11, 79, 108, 0.35);
+        outline-offset: 2px;
+        opacity: 0.15;
+        background: rgba(11, 79, 108, 0.08);
+    }
     @media (max-width: 900px) {
-        .splash-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-    @media (max-width: 560px) {
-        .splash-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .splash-grid {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 0.45rem;
+        }
+        .splash-tile {
+            height: 4.2rem;
+            font-size: 0.68rem;
+            padding: 0.3rem 0.35rem;
+        }
     }
 
     @media print {
@@ -550,6 +562,14 @@
             <img src="images/logo1.png" alt="Logo 1">
             <div class="header-titulo">
                 <h1>Cubicación y Valorización Referencial de Obras en Canales de Riego</h1>
+                <button
+                    v-if="!mostrandoSplash"
+                    type="button"
+                    class="btn-home-invisible"
+                    aria-label="Volver al inicio"
+                    title=""
+                    @click="volverAlSplash"
+                ></button>
             </div>
             <img src="images/logo2.png" alt="Logo 2">
         </div>
@@ -604,7 +624,6 @@
                     <option v-for="t in tipologias" :key="t.id" :value="t.id">{{ t.titulo }}</option>
                 </select>
             </label>
-            <button type="button" class="btn-cambiar-tipologia" @click="volverAlSplash">Volver al inicio</button>
         </div>
 
         <div class="panel" id="panel-datos">
