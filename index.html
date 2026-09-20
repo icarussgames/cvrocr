@@ -432,6 +432,102 @@
     }
     .vacio { color: #777; font-style: italic; }
 
+
+    /* Splash tipologías */
+    .splash {
+        max-width: 1100px;
+        margin: 1.5rem auto 2rem;
+        padding: 0 1rem;
+    }
+    .splash h2 {
+        text-align: center;
+        color: #0b4f6c;
+        margin: 0 0 0.35rem;
+        font-size: 1.35rem;
+    }
+    .splash p.splash-sub {
+        text-align: center;
+        color: #555;
+        margin: 0 0 1.25rem;
+        font-size: 0.95rem;
+    }
+    .splash-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.85rem;
+    }
+    .splash-tile {
+        aspect-ratio: 1;
+        border: 2px solid #0b4f6c;
+        border-radius: 12px;
+        background: #fff;
+        color: #0b4f6c;
+        font-weight: 700;
+        font-size: 0.92rem;
+        line-height: 1.25;
+        padding: 0.75rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(11, 79, 108, 0.12);
+        transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+    .splash-tile:hover:not(:disabled) {
+        transform: translateY(-2px);
+        background: #e8f3f8;
+        box-shadow: 0 6px 14px rgba(11, 79, 108, 0.18);
+    }
+    .splash-tile:disabled,
+    .splash-tile.pendiente {
+        cursor: not-allowed;
+        border-color: #b7c2c9;
+        color: #8a969e;
+        background: #f3f5f7;
+        box-shadow: none;
+        font-weight: 600;
+    }
+    .splash-tile .num {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        opacity: 0.7;
+        margin-bottom: 0.35rem;
+    }
+    .btn-cambiar-tipologia {
+        margin-left: 0.75rem;
+        padding: 0.35rem 0.75rem;
+        border: 1px solid #0b4f6c;
+        background: #fff;
+        color: #0b4f6c;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+    .btn-cambiar-tipologia:hover { background: #e8f3f8; }
+    .fila-tipologia-activa {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .fila-tipologia-activa .titulo-tipologia {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #0b4f6c;
+        flex: 1;
+        min-width: 12rem;
+    }
+    @media (max-width: 900px) {
+        .splash-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 560px) {
+        .splash-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
     @media print {
         body * { visibility: hidden; }
         #zona-imprimible, #zona-imprimible * { visibility: visible; }
@@ -463,6 +559,28 @@
         </div>
     </header>
 
+    <section v-if="mostrandoSplash" class="splash" aria-label="Selección de tipología">
+        <h2>Seleccione la tipología de obra</h2>
+        <p class="splash-sub">15 casillas · 10 disponibles ahora · 5 pendientes</p>
+        <div class="splash-grid">
+            <button
+                v-for="(slot, idx) in slotsSplash"
+                :key="slot.id + '-' + idx"
+                type="button"
+                class="splash-tile"
+                :class="{ pendiente: !slot.disponible }"
+                :disabled="!slot.disponible"
+                @click="elegirTipologiaDesdeSplash(slot)"
+            >
+                <span>
+                    <span class="num">{{ idx + 1 }}</span>
+                    {{ slot.titulo }}
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <template v-if="!mostrandoSplash">
     <nav class="tabs">
         <button :class="{activa: pestanaActiva === 'datos'}" @click="pestanaActiva = 'datos'">
             Datos de la Obra
@@ -483,13 +601,10 @@
     <main v-if="pestanaActiva === 'datos'">
         <!-- Panel de ancho completo: selección de tipología -->
         <div class="panel" id="panel-tipologia">
-            <label class="fila-tipologia">
-                <span>Seleccionar tipología de obra</span>
-                <select v-model="tipologiaId" @change="alCambiarTipologia">
-                    <option disabled value="">Seleccione una tipología...</option>
-                    <option v-for="t in tipologias" :key="t.id" :value="t.id">{{ t.titulo }}</option>
-                </select>
-            </label>
+            <div class="fila-tipologia-activa">
+                <span class="titulo-tipologia">{{ tipologiaActual ? tipologiaActual.titulo : 'Tipología' }}</span>
+                <button type="button" class="btn-cambiar-tipologia" @click="volverAlSplash">Cambiar tipología</button>
+            </div>
         </div>
 
         <div class="panel" id="panel-datos">
@@ -957,7 +1072,9 @@
         </div>
     </main>
 
-    <div class="barra-color"></div>
+    </template>
+
+<div class="barra-color"></div>
 
     <div v-if="modal.visible" class="modal-overlay" @click.self="confirmarModal">
         <div class="modal-caja">
@@ -975,6 +1092,7 @@ createApp({
         return {
             tipologias: [],
             tipologiaId: "",
+            mostrandoSplash: true,
             parametros: {},
             porcentajes: { gastos_generales: 8, utilidades: 15, imprevistos: 1, iva: 19 },
             vectoresPrecio: [],
@@ -992,7 +1110,25 @@ createApp({
     computed: {
         tipologiaActual() {
             return this.tipologias.find(t => t.id === this.tipologiaId) || null;
-        }
+        },
+        slotsSplash() {
+            const known = this.tipologias.map((t) => ({
+                id: t.id,
+                titulo: t.titulo,
+                disponible: true,
+            }));
+            const slots = known.slice();
+            let n = 1;
+            while (slots.length < 15) {
+                slots.push({
+                    id: "pendiente_" + n,
+                    titulo: "Próximamente",
+                    disponible: false,
+                });
+                n += 1;
+            }
+            return slots.slice(0, 15);
+        },
     },
     mounted() {
         fetch("api-tipologias.php")
