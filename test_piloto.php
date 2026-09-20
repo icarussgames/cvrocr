@@ -3,7 +3,7 @@
  * Prueba del piloto v0.6: tipologías vivas
  * (revestimiento_canal, bocatoma, compuerta, sifon_cruce,
  * cajon_desarenador_reja, desarenador_reja, canoa,
- * abovedamiento_reja_canoa). Comparar a mano contra los esperado_*.json.
+ * abovedamiento_reja_canoa, tunel_portales). Comparar a mano contra los esperado_*.json.
  *
  * Uso (por SSH o terminal si tu hosting lo permite):
  *   php test_piloto.php
@@ -92,6 +92,16 @@ $abovedamiento_reja_canoa = valorizar('abovedamiento_reja_canoa', [
     'ancho_losa' => 2.2,
 ]);
 
+
+$tunel_portales = valorizar('tunel_portales', [
+    'caudal' => 0.65,
+    'longitud_tunel' => 20.0,
+    'ancho_tunel' => 1.4,
+    'alto_tunel' => 1.0,
+    'alto_existente' => 1.0,
+    'ancho_existente' => 1.0,
+]);
+
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode([
     'revestimiento_canal' => $revestimiento,
@@ -102,5 +112,6 @@ echo json_encode([
     'desarenador_reja' => $desarenador_reja,
     'canoa' => $canoa,
     'abovedamiento_reja_canoa' => $abovedamiento_reja_canoa,
+    'tunel_portales' => $tunel_portales,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 echo "\n";

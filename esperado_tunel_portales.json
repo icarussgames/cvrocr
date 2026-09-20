@@ -1,0 +1,333 @@
+{
+    "tipologia": "Mejoramiento con Portales y Revestimiento en Túnel",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT021",
+            "descripcion": "Excavacion con maquina",
+            "unidad": "m3",
+            "cantidad": 0.46,
+            "precio_clp": 4344,
+            "subtotal_clp": 1981,
+            "subtotal_uf": 0.05
+        },
+        {
+            "codigo": "MT024",
+            "descripcion": "Relleno material granular compactado",
+            "unidad": "m3",
+            "cantidad": 0.46,
+            "precio_clp": 32008,
+            "subtotal_clp": 14596,
+            "subtotal_uf": 0.37
+        },
+        {
+            "codigo": "MT033",
+            "descripcion": "Manejo y transporte a botadero",
+            "unidad": "m3",
+            "cantidad": 0,
+            "precio_clp": 3600,
+            "subtotal_clp": 0,
+            "subtotal_uf": 0
+        },
+        {
+            "codigo": "MT003",
+            "descripcion": "Hormigon estructural G25",
+            "unidad": "m3",
+            "cantidad": 1.46,
+            "precio_clp": 189220,
+            "subtotal_clp": 277018,
+            "subtotal_uf": 6.95
+        },
+        {
+            "codigo": "MT011",
+            "descripcion": "Enfierradura (acero de refuerzo)",
+            "unidad": "kg",
+            "cantidad": 117.12,
+            "precio_clp": 3959,
+            "subtotal_clp": 463678,
+            "subtotal_uf": 11.64
+        },
+        {
+            "codigo": "MT018",
+            "descripcion": "Moldaje",
+            "unidad": "m2",
+            "cantidad": 3.85,
+            "precio_clp": 19616,
+            "subtotal_clp": 75443,
+            "subtotal_uf": 1.89
+        },
+        {
+            "codigo": "MT037",
+            "descripcion": "Shotcrete proyectado",
+            "unidad": "m2",
+            "cantidad": 96,
+            "precio_clp": 35000,
+            "subtotal_clp": 3360000,
+            "subtotal_uf": 84.33
+        },
+        {
+            "codigo": "MT038",
+            "descripcion": "Malla ACMA C-139",
+            "unidad": "m2",
+            "cantidad": 96,
+            "precio_clp": 7500,
+            "subtotal_clp": 720000,
+            "subtotal_uf": 18.07
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Portales y revestimiento",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Movimiento de tierras",
+                    "partidas": [
+                        {
+                            "codigo": "MT021",
+                            "descripcion": "Excavacion con maquina",
+                            "unidad": "m3",
+                            "cantidad": 0.46,
+                            "precio_clp": 4344,
+                            "subtotal_clp": 1981,
+                            "subtotal_uf": 0.05,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT024",
+                            "descripcion": "Relleno material granular compactado",
+                            "unidad": "m3",
+                            "cantidad": 0.46,
+                            "precio_clp": 32008,
+                            "subtotal_clp": 14596,
+                            "subtotal_uf": 0.37,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT033",
+                            "descripcion": "Manejo y transporte a botadero",
+                            "unidad": "m3",
+                            "cantidad": 0,
+                            "precio_clp": 3600,
+                            "subtotal_clp": 0,
+                            "subtotal_uf": 0,
+                            "item": "2.1.3"
+                        }
+                    ],
+                    "subtotal_clp": 16577,
+                    "subtotal_uf": 0.42
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Hormigones",
+                    "partidas": [
+                        {
+                            "codigo": "MT003",
+                            "descripcion": "Hormigon estructural G25",
+                            "unidad": "m3",
+                            "cantidad": 1.46,
+                            "precio_clp": 189220,
+                            "subtotal_clp": 277018,
+                            "subtotal_uf": 6.95,
+                            "item": "2.2.1"
+                        },
+                        {
+                            "codigo": "MT011",
+                            "descripcion": "Enfierradura (acero de refuerzo)",
+                            "unidad": "kg",
+                            "cantidad": 117.12,
+                            "precio_clp": 3959,
+                            "subtotal_clp": 463678,
+                            "subtotal_uf": 11.64,
+                            "item": "2.2.2"
+                        },
+                        {
+                            "codigo": "MT018",
+                            "descripcion": "Moldaje",
+                            "unidad": "m2",
+                            "cantidad": 3.85,
+                            "precio_clp": 19616,
+                            "subtotal_clp": 75443,
+                            "subtotal_uf": 1.89,
+                            "item": "2.2.3"
+                        }
+                    ],
+                    "subtotal_clp": 816139,
+                    "subtotal_uf": 20.48
+                },
+                {
+                    "numero": "2.3",
+                    "titulo": "Revestimiento shotcrete",
+                    "partidas": [
+                        {
+                            "codigo": "MT037",
+                            "descripcion": "Shotcrete proyectado",
+                            "unidad": "m2",
+                            "cantidad": 96,
+                            "precio_clp": 35000,
+                            "subtotal_clp": 3360000,
+                            "subtotal_uf": 84.33,
+                            "item": "2.3.1"
+                        },
+                        {
+                            "codigo": "MT038",
+                            "descripcion": "Malla ACMA C-139",
+                            "unidad": "m2",
+                            "cantidad": 96,
+                            "precio_clp": 7500,
+                            "subtotal_clp": 720000,
+                            "subtotal_uf": 18.07,
+                            "item": "2.3.2"
+                        }
+                    ],
+                    "subtotal_clp": 4080000,
+                    "subtotal_uf": 102.4
+                }
+            ],
+            "subtotal_clp": 4912716,
+            "subtotal_uf": 123.3
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Alto existente del canal (informativo)",
+            "valor": 1,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho existente del canal (informativo)",
+            "valor": 1,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Espesor radier shotcrete (fijo Excel)",
+            "valor": 0.15,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Espesor muro\/techo shotcrete (fijo Excel)",
+            "valor": 0.08,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Superficie radier",
+            "valor": 28,
+            "unidad": "m²"
+        },
+        {
+            "nombre": "Área muros + techo",
+            "valor": 68,
+            "unidad": "m²"
+        },
+        {
+            "nombre": "Volumen radier (informativo; no se cobra aparte)",
+            "valor": 4.2,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Volumen muros\/techo (informativo; no se cobra aparte)",
+            "valor": 5.44,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Hormigón un portal (entrada o salida)",
+            "valor": 0.732,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Sobreancho portal (fijo Excel)",
+            "valor": 0.25,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Cimiento \/ techo \/ largo portal",
+            "valor": "0.3 \/ 0.4 \/ 0.4",
+            "unidad": "m"
+        },
+        {
+            "nombre": "Emplantillado calculado Excel C30 (presupuesto = 0)",
+            "valor": 1.52,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Antisol = moldaje Excel C24 (presupuesto = 0)",
+            "valor": 3.846,
+            "unidad": "m²"
+        }
+    ],
+    "notas": [
+        "Tipología 10 — Mejoramiento con Portales y Revestimiento en Túnel. Revestimiento interior con shotcrete e=8 cm (radier + muros + techo) y portales de hormigón armado en entrada y salida. Caudal de porteo de referencia: 0.65 m³\/s (informativo; no dimensiona la sección).",
+        "Shotcrete: superficie = 2·L·H + 2·L·b = 96 m² (Excel C18). Se valoriza como MT037 (shotcrete) + MT038 (malla ACMA C-139), ambos con la misma superficie. El Excel tip.10 usa un PU combinado (~43 560 $\/m²); precios.csv los separa (35 000 + 7 500). Volúmenes de radier\/muros del Excel 3.1 son informativos — no se cobran como hormigón G25.",
+        "Portales: hormigón G25 = 2 × (2 columnas + viga + cimiento) = 1.464 m³. Enfierradura 80 kg\/m³. Moldaje según fórmula Excel C22 (un portal × 1,2; no multiplica por 2 portales — fidelidad parcial al Excel de ejemplo).",
+        "Movimiento de tierras solo de portales (Excel C26–C28). Excavación = cimiento·(ancho+2·sobreancho)·largo·2; relleno = excav·0,5·2. Excedentes vía excedentes() (≈ 0 en el ejemplo, igual que presupuesto E15 = 0). Escarpe = 0 en el Excel.",
+        "Emplantillado (C30) y antisol (C24) se calculan en 3.2 pero el presupuesto tip.10 los deja en cantidad 0 — no se incluyen como partidas (sí aparecen como informativos). Excavación en roca (C21 = 0) tampoco se incluye.",
+        "Geometría fija del Excel: sobreancho portal 0,25 m, cimiento 0,3 m, techo 0,4 m, largo portal 0,4 m, espesor radier 0,15 m, espesor muro\/techo 0,08 m. Alto\/ancho existente del canal son informativos (no entran a las cubicaciones)."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 6912016,
+            "uf": 173.49
+        },
+        "gastos_generales": {
+            "clp": 552961,
+            "uf": 13.88
+        },
+        "utilidades": {
+            "clp": 1036802,
+            "uf": 26.02
+        },
+        "imprevistos": {
+            "clp": 69120,
+            "uf": 1.73
+        },
+        "neto": {
+            "clp": 8570900,
+            "uf": 215.12
+        },
+        "iva": {
+            "clp": 1628471,
+            "uf": 40.87
+        },
+        "total": {
+            "clp": 10199371,
+            "uf": 256
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}
