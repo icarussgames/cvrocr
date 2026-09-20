@@ -1,0 +1,267 @@
+{
+    "tipologia": "Mejoramiento con Abovedamiento y Reja en Canoas",
+    "partidas": [
+        {
+            "codigo": "MT035",
+            "descripcion": "Instalacion de faenas",
+            "unidad": "gl",
+            "cantidad": 1,
+            "precio_clp": 1999300,
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "codigo": "MT003",
+            "descripcion": "Hormigon estructural G25",
+            "unidad": "m3",
+            "cantidad": 5.61,
+            "precio_clp": 189220,
+            "subtotal_clp": 1061524,
+            "subtotal_uf": 26.64
+        },
+        {
+            "codigo": "MT011",
+            "descripcion": "Enfierradura (acero de refuerzo)",
+            "unidad": "kg",
+            "cantidad": 448.8,
+            "precio_clp": 3959,
+            "subtotal_clp": 1776799,
+            "subtotal_uf": 44.6
+        },
+        {
+            "codigo": "MT018",
+            "descripcion": "Moldaje",
+            "unidad": "m2",
+            "cantidad": 81.31,
+            "precio_clp": 19616,
+            "subtotal_clp": 1594977,
+            "subtotal_uf": 40.03
+        },
+        {
+            "codigo": "MT039",
+            "descripcion": "Reja metalica (pletinas y refuerzos)",
+            "unidad": "kg",
+            "cantidad": 167.27,
+            "precio_clp": 4500,
+            "subtotal_clp": 752693,
+            "subtotal_uf": 18.89
+        },
+        {
+            "codigo": "MT040",
+            "descripcion": "Aplicacion de Antisol (curado quimico)",
+            "unidad": "m2",
+            "cantidad": 81.31,
+            "precio_clp": 358,
+            "subtotal_clp": 29109,
+            "subtotal_uf": 0.73
+        }
+    ],
+    "capitulos": [
+        {
+            "numero": "1",
+            "titulo": "Instalación de faenas",
+            "partidas": [
+                {
+                    "codigo": "MT035",
+                    "descripcion": "Instalacion de faenas",
+                    "unidad": "gl",
+                    "cantidad": 1,
+                    "precio_clp": 1999300,
+                    "subtotal_clp": 1999300,
+                    "subtotal_uf": 50.18,
+                    "item": "1.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 1999300,
+            "subtotal_uf": 50.18
+        },
+        {
+            "numero": "2",
+            "titulo": "Abovedado y rejas",
+            "partidas": [],
+            "subcapitulos": [
+                {
+                    "numero": "2.1",
+                    "titulo": "Hormigones (losa)",
+                    "partidas": [
+                        {
+                            "codigo": "MT003",
+                            "descripcion": "Hormigon estructural G25",
+                            "unidad": "m3",
+                            "cantidad": 5.61,
+                            "precio_clp": 189220,
+                            "subtotal_clp": 1061524,
+                            "subtotal_uf": 26.64,
+                            "item": "2.1.1"
+                        },
+                        {
+                            "codigo": "MT011",
+                            "descripcion": "Enfierradura (acero de refuerzo)",
+                            "unidad": "kg",
+                            "cantidad": 448.8,
+                            "precio_clp": 3959,
+                            "subtotal_clp": 1776799,
+                            "subtotal_uf": 44.6,
+                            "item": "2.1.2"
+                        },
+                        {
+                            "codigo": "MT018",
+                            "descripcion": "Moldaje",
+                            "unidad": "m2",
+                            "cantidad": 81.31,
+                            "precio_clp": 19616,
+                            "subtotal_clp": 1594977,
+                            "subtotal_uf": 40.03,
+                            "item": "2.1.3"
+                        }
+                    ],
+                    "subtotal_clp": 4433300,
+                    "subtotal_uf": 111.27
+                },
+                {
+                    "numero": "2.2",
+                    "titulo": "Reja",
+                    "partidas": [
+                        {
+                            "codigo": "MT039",
+                            "descripcion": "Reja metalica (pletinas y refuerzos)",
+                            "unidad": "kg",
+                            "cantidad": 167.27,
+                            "precio_clp": 4500,
+                            "subtotal_clp": 752693,
+                            "subtotal_uf": 18.89,
+                            "item": "2.2.1"
+                        }
+                    ],
+                    "subtotal_clp": 752693,
+                    "subtotal_uf": 18.89
+                }
+            ],
+            "subtotal_clp": 5185993,
+            "subtotal_uf": 130.16
+        },
+        {
+            "numero": "3",
+            "titulo": "Obras adicionales",
+            "partidas": [
+                {
+                    "codigo": "MT040",
+                    "descripcion": "Aplicacion de Antisol (curado quimico)",
+                    "unidad": "m2",
+                    "cantidad": 81.31,
+                    "precio_clp": 358,
+                    "subtotal_clp": 29109,
+                    "subtotal_uf": 0.73,
+                    "item": "3.1"
+                }
+            ],
+            "subcapitulos": [],
+            "subtotal_clp": 29109,
+            "subtotal_uf": 0.73
+        }
+    ],
+    "informativos": [
+        {
+            "nombre": "Longitud canoa existente (informativo)",
+            "valor": 12,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho superior canal (basal + 2·0,25·alto)",
+            "valor": 1.85,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Espesor losa abovedamiento (fijo Excel)",
+            "valor": 0.15,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Volumen hormigón abov. aguas arriba",
+            "valor": 3.3,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Volumen hormigón abov. aguas abajo",
+            "valor": 2.31,
+            "unidad": "m³"
+        },
+        {
+            "nombre": "Alto reja proyectada (alto + espesor + 0,1)",
+            "valor": 1.15,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Ancho reja proyectada (= ancho existente)",
+            "valor": 1.4,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Pletinas verticales (por reja)",
+            "valor": 15,
+            "unidad": "un"
+        },
+        {
+            "nombre": "Metros lineales de pletina por reja (+10%)",
+            "valor": 22.055,
+            "unidad": "m"
+        },
+        {
+            "nombre": "Peso pletinas por reja (sin marco)",
+            "valor": 41.816,
+            "unidad": "kg"
+        },
+        {
+            "nombre": "Peso reja una (pletinas + refuerzos)",
+            "valor": 83.633,
+            "unidad": "kg"
+        }
+    ],
+    "notas": [
+        "Tipología 7 — Mejoramiento con Abovedamiento y Reja en Canoas. Aboveda tramos de canal aguas arriba (10 m) y aguas abajo (7 m) de una canoa existente (largo 12 m) e instala rejas en entrada y salida. Caudal de porteo de referencia: 0.9 m³\/s (informativo; no dimensiona la sección).",
+        "No construye la canoa (eso es tipología 6 \/ canoa.php). Aquí solo hay losas de abovedamiento + dos rejas sobre obra existente.",
+        "Hormigón G25 = losa aguas arriba (3.3 m³) + losa aguas abajo (2.31 m³). Fórmula Excel C6\/C13 = L · espesor · ancho_losa (espesor fijo 0,15 m). Enfierradura 80 kg\/m³ (Excel C21). Moldaje según fórmula asimétrica Excel C22; antisol = moldaje.",
+        "Sin movimiento de tierras en el presupuesto de ejemplo (la losa se apoya sobre el canal existente). Emplantillado tampoco aparece — no se incluye.",
+        "Reja: pletinas 80×3 mm cada 0,1 m + 2 horizontales, +10% despuntes, peso ×2 (marco\/refuerzos) y ×2 (entrada + salida). Valorizada como MT039. El Excel tip.7 usa largo de verticales = ancho reja (F5); este motor usa alto reja (criterio físico, igual tip.4\/5). Accesorios (20% del costo reja) y anclaje (40%) del Excel no tienen código MT en precios.csv — incluir manualmente si aplica.",
+        "Ancho superior del canal (1.85 m = basal + 2·0,25·alto) es informativo; no entra a las cubicaciones (la losa usa ancho_losa = 2.2 m)."
+    ],
+    "porcentajes": {
+        "gastos_generales": 8,
+        "utilidades": 15,
+        "imprevistos": 1,
+        "iva": 19
+    },
+    "resumen": {
+        "costo_directo": {
+            "clp": 7214402,
+            "uf": 181.08
+        },
+        "gastos_generales": {
+            "clp": 577152,
+            "uf": 14.49
+        },
+        "utilidades": {
+            "clp": 1082160,
+            "uf": 27.16
+        },
+        "imprevistos": {
+            "clp": 72144,
+            "uf": 1.81
+        },
+        "neto": {
+            "clp": 8945859,
+            "uf": 224.53
+        },
+        "iva": {
+            "clp": 1699713,
+            "uf": 42.66
+        },
+        "total": {
+            "clp": 10645572,
+            "uf": 267.2
+        }
+    },
+    "uf_clp": 39841.72,
+    "vector_precio": "precio_clp"
+}
