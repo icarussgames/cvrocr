@@ -3,7 +3,8 @@
  * Prueba del piloto v0.6: tipologías vivas
  * (revestimiento_canal, bocatoma, compuerta, sifon_cruce,
  * cajon_desarenador_reja, desarenador_reja, canoa,
- * abovedamiento_reja_canoa, tunel_portales, abovedamiento_derrumbes).
+ * abovedamiento_reja_canoa, tunel_portales, abovedamiento_derrumbes,
+ * desarenador, marco_partidor).
  * Comparar a mano contra los esperado_*.json.
  *
  * Uso (por SSH o terminal si tu hosting lo permite):
@@ -104,6 +105,23 @@ $abovedamiento_derrumbes = valorizar('abovedamiento_derrumbes', [
     'talud' => 0.0,
 ]);
 
+
+
+$marco_partidor = valorizar('marco_partidor', [
+    'caudal' => 0.036,
+    'alto_entrada' => 0.8,
+    'ancho_entrada' => 1.0,
+    'ancho_salida_1' => 1.0,
+    'ancho_salida_2' => 1.0,
+]);
+
+$desarenador = valorizar('desarenador', [
+    'caudal' => 0.8,
+    'largo_existente' => 20.0,
+    'alto_existente' => 2.5,
+    'ancho_existente' => 2.5,
+]);
+
 $tunel_portales = valorizar('tunel_portales', [
     'caudal' => 0.65,
     'longitud_tunel' => 20.0,
@@ -125,5 +143,7 @@ echo json_encode([
     'abovedamiento_reja_canoa' => $abovedamiento_reja_canoa,
     'tunel_portales' => $tunel_portales,
     'abovedamiento_derrumbes' => $abovedamiento_derrumbes,
+    'desarenador' => $desarenador,
+    'marco_partidor' => $marco_partidor,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 echo "\n";

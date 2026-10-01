@@ -5,8 +5,8 @@
  * Obra de captación permanente con losa de fondo, zapatas, machones
  * de apoyo de compuertas y muros de anclaje laterales.
  *
- * No confundir con desarenador.php ("Reposición de bocatoma"), que es
- * otra tipología y otro id.
+ * No confundir con desarenador.php (tipología 8 — Construcción de
+ * Desarenador), que es otra tipología y otro id.
  */
 
 function cubicacion_bocatoma(
