@@ -4,7 +4,7 @@
  * (revestimiento_canal, bocatoma, compuerta, sifon_cruce,
  * cajon_desarenador_reja, desarenador_reja, canoa,
  * abovedamiento_reja_canoa, tunel_portales, abovedamiento_derrumbes,
- * desarenador, marco_partidor).
+ * entubamiento_derrumbes, desarenador, marco_partidor).
  * Comparar a mano contra los esperado_*.json.
  *
  * Uso (por SSH o terminal si tu hosting lo permite):
@@ -107,6 +107,15 @@ $abovedamiento_derrumbes = valorizar('abovedamiento_derrumbes', [
 
 
 
+$entubamiento_derrumbes = valorizar('entubamiento_derrumbes', [
+    'caudal' => 0.56,
+    'largo' => 45.0,
+    'diametro_mm' => 1000,
+    'pendiente' => 0.002,
+    'n_manning' => 0.02,
+    'talud' => 0.0,
+]);
+
 $marco_partidor = valorizar('marco_partidor', [
     'caudal' => 0.036,
     'alto_entrada' => 0.8,
@@ -143,6 +152,7 @@ echo json_encode([
     'abovedamiento_reja_canoa' => $abovedamiento_reja_canoa,
     'tunel_portales' => $tunel_portales,
     'abovedamiento_derrumbes' => $abovedamiento_derrumbes,
+    'entubamiento_derrumbes' => $entubamiento_derrumbes,
     'desarenador' => $desarenador,
     'marco_partidor' => $marco_partidor,
 ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);

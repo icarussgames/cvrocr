@@ -193,7 +193,8 @@ function valorizar($tipologia_id, $parametros, $porcentajes = null, $vector_prec
     $partidas_con_ruta = [];
     $costo_directo = 0.0;
     // Cada entrada es [codigo, cantidad] o, opcionalmente,
-    // [codigo, cantidad, etiqueta, ruta_capitulo]:
+    // [codigo, cantidad, etiqueta, ruta_capitulo] o
+    // [codigo, cantidad, etiqueta, ruta_capitulo, precio_clp]:
     //   - etiqueta reemplaza la descripcion del CSV solo para esa fila
     //     (util cuando dos partidas usan el mismo codigo/precio pero
     //     corresponden a partes distintas de la obra, ej. "Hormigon
@@ -202,20 +203,29 @@ function valorizar($tipologia_id, $parametros, $porcentajes = null, $vector_prec
     //     define en que capitulo del presupuesto presentado cae esa
     //     partida (ver agrupar_por_capitulos() mas abajo). Si se omite,
     //     la partida cae en un capitulo generico "Partidas".
+    //   - precio_clp (5º elemento) reemplaza el PU del CSV solo para
+    //     esa fila. null o ausente = precio del vector. Sirve cuando
+    //     el PU depende de un parámetro (diámetro HDPE corrugado del
+    //     catálogo PU TUB) y no hay una fila del CSV por cada variante.
+    //     Las entradas de 2, 3 o 4 elementos siguen igual.
     foreach ($cantidades as $entrada) {
         $codigo = $entrada[0];
         $cantidad = $entrada[1];
         $etiqueta = $entrada[2] ?? null;
         $ruta_capitulo = $entrada[3] ?? [];
         $precio = $precios[$codigo];
-        $subtotal = $cantidad * $precio['precio_clp'];
+        $precio_unitario = $precio['precio_clp'];
+        if (array_key_exists(4, $entrada) && $entrada[4] !== null) {
+            $precio_unitario = (float) $entrada[4];
+        }
+        $subtotal = $cantidad * $precio_unitario;
         $costo_directo += $subtotal;
         $partida = [
             'codigo' => $codigo,
             'descripcion' => $etiqueta ?? $precio['descripcion'],
             'unidad' => $precio['unidad'],
             'cantidad' => round($cantidad, 2),
-            'precio_clp' => $precio['precio_clp'],
+            'precio_clp' => (int) round($precio_unitario),
             'subtotal_clp' => (int) round($subtotal),
             'subtotal_uf' => round($subtotal / UF_CLP, 2),
         ];
