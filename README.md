@@ -157,6 +157,15 @@ su "ruta" en la presentación del presupuesto:
 ['MT018', $c['moldaje_muros_ala'], 'Moldaje muros de ala', ['Tramo revestido', 'Muros de ala']],
 ```
 
+Un 5º elemento opcional, `precio_clp`, reemplaza el PU del CSV solo
+para esa fila (`null` o ausente = precio del vector). Lo usa la
+tipología 13 para el PU por diámetro del catálogo PU TUB (HDPE
+corrugado) sin una fila del CSV por cada diámetro:
+
+```php
+['MT043', $largo, $etiqueta, ['Tramo entubado', 'Tubería HDPE corrugada'], 86400],
+```
+
 La ruta es `['Capítulo']` (sin subcapítulo) o `['Capítulo',
 'Subcapítulo']` — así cada tipología define su propia estructura de
 capítulos (ninguna otra tipología tiene por qué compartir "Muros de
