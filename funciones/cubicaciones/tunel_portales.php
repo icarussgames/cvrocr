@@ -176,7 +176,7 @@ function _tunel_portales($p) {
 
 $TIPOLOGIAS['tunel_portales'] = [
     'titulo' => 'Mejoramiento con Portales y Revestimiento en Túnel',
-    'esquema' => 'esquema-sifon.png',
+    'esquema' => 'esquema_tunel.png',
     'campos' => [
         _campo('caudal', 'Caudal de porteo del canal', 'm³/s', 0.65,
             'Caudal de porteo de referencia. Informativo en este motor (no dimensiona la sección).'),
